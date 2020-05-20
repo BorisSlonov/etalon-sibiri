@@ -1,0 +1,151 @@
+.page-1 {
+    position: relative;
+    height: 65vh;
+    min-height: 550px;
+    background-image: url(../img/bg-1.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.header-content {
+    display: flex;
+    padding-top: 100px;
+    height: 100%;
+
+    &__item:first-child {
+        margin-top: 5%;
+        position: relative;
+        z-index: 5;
+        height: 100%;
+    }
+
+
+    &__item:last-child {
+        flex-basis: 40%;
+    }
+
+    &__title {
+        font-size: 2.9rem;
+        color: $main-text;
+        letter-spacing: .04em;
+        font-weight: 700;
+    }
+
+    &__profit {
+        display: flex;
+        margin-top: 3em;
+    }
+
+    &__profit-item:last-child {
+        margin-left: 2em;
+    }
+
+    &__cost {
+        display: flex;
+        flex-direction: column;
+
+        .cost-red {
+            font-size: 3.5rem;
+            color: #da0201;
+            line-height: .9;
+        }
+
+        .cost-old {
+            position: relative;
+            font-size: 1.2rem;
+            letter-spacing: .75px;
+            margin-bottom: 0.5em;
+
+            &::after {
+                content: '';
+                position: absolute;
+                top: 50%;
+                transform: translate(-15%, -50%) rotate(-20deg);
+                display: block;
+                width: 40%;
+                height: 1px;
+                background-color: #000;
+            }
+
+        }
+    }
+
+    &__btn-container {
+        display: flex;
+        align-items: flex-end;
+        margin-top: 3em;
+
+        .main-btn {
+            margin-left: 2em;
+            max-width: 280px;
+        }
+    }
+
+    &__img {
+        width: 100%;
+        object-fit: contain;
+        position: absolute;
+        max-width: 70%;
+        right: 0;
+        bottom: 0;
+    }
+}
+
+@media(min-width:1440px) {
+    .header-content {
+        &__img {
+            max-width: 60%;
+         
+        }
+    }
+}
+
+@media(min-width:1620px) {
+    .header-content {
+        &__img {
+            max-width: 50%;
+            transform: translateX(-20%);
+         
+        }
+    }
+}
+
+
+@media(max-width:922px) {
+    .header-content {
+        flex-direction: column;
+   
+
+        &__item:first-child {
+            margin-top: 0;
+            transform: translate(0);
+        }
+    }
+
+}
+
+@media(max-width:550px) {
+    .header-content {
+        justify-content: center;
+        align-items: center;
+
+        &__item:last-child {
+            flex-basis: 100%;
+            width: 100%;
+        }
+
+        &__img {
+            display: block;
+            margin-left: auto;
+            width: 100%;
+        }
+    }
+}
+
+@media(max-width:375px) {
+    .header-content {
+        &__title {
+            font-size: 2.4rem;
+        }
+    }
+}
