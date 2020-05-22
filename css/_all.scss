@@ -20,6 +20,24 @@
         }
     }
 }
+
+.h2-container {
+    text-align: center;
+    margin: 3em 0;
+    color: $main-text;
+
+    &__title {
+        font-weight: 900;
+        font-size: 2rem;
+    }
+
+    &__sub-title {
+        max-width: 50%;
+        display: block;
+        margin: 1em auto 0;
+        line-height: 1.5;
+    }
+}
 .bold {
     font-weight: 700;
 }

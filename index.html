@@ -127,44 +127,53 @@
 
 
 
-    <div class="container">
-        <div class="range-container">
-            <div class="slider-cost">
-                <span>2</span>
-                <span>4</span>
-                <span>8</span>
-                <span>16</span>
-                <span>32</span>
-            </div>
+    <section class="page-calc">
+        <div class="container">
 
-            <div class="slider">
-                <div class="output-wrapper">
-                    <output for="fader" id="volume">1</output>
+            <div class="h2-container">
+                <h2 class="h2-container__title">ЗАКАЗАТЬ ВОДУ ЭТО ПРОСТО!</h2>
+                <span class="h2-container__sub-title">Наша компания занимается доставкой идеально чистой 
+                    природной воды по самой выгодной цене.</span>
+            </div>
+    
+            <div class="range-container">
+                <div class="slider-cost">
+                    <span>2</span>
+                    <span>4</span>
+                    <span>8</span>
+                    <span>16</span>
+                    <span>32</span>
                 </div>
-                <input type="range" id="fader" min="1" max="35" value="0" step="1" oninput="outputUpdate(value)">
-                <div class="slider-dots">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
+    
+                <div class="slider">
+                    <div class="output-wrapper">
+                        <output for="fader" id="volume">1</output>
+                    </div>
+                    <input type="range" id="fader" min="1" max="35" value="0" step="1" oninput="outputUpdate(value)">
+                    <div class="slider-dots">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+    
+    
+                <div class="slider-money">
+                    <span>175 ₽</span>
+                    <span>165 ₽</span>
+                    <span>160 ₽</span>
+                    <span>155 ₽</span>
+                    <span>150 ₽</span>
                 </div>
             </div>
-
-
-            <div class="slider-money">
-                <span>175 ₽</span>
-                <span>165 ₽</span>
-                <span>160 ₽</span>
-                <span>155 ₽</span>
-                <span>150 ₽</span>
+    
+    
+            <div class="output">
+                <label>1 шт <span>250 ₽</span></label> 
             </div>
-        </div>
-
-
-        <div class="output">
-            <label>1 шт 250 ₽</label> 
-        </div>
+    </section>
 
     </div>
 
