@@ -29,7 +29,7 @@
     }
 
     &__logo {
-        flex-basis: 15%;
+        
         display: flex;
     }
 
@@ -140,9 +140,7 @@
         right: 0;
     }
 
-    .header__logo {
-        flex-basis: 25%;
-    }
+  
 
     .header__burger {
         display: block;
@@ -183,13 +181,7 @@
     }
 }
 
-@media(max-width:425px) {
-    .header {
-        &__logo {
-            flex-basis: 35%;
-        }
-    }
-}
+
 
 
 .bgc-fff {
