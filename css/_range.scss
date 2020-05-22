@@ -1,0 +1,152 @@
+.range-container {
+	margin-top: 10em;
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+	display: block;
+	max-width: 680px;
+	position: relative;
+	color: $main-text;
+}
+
+.slider-money {
+	position: absolute;
+	display: flex;
+	width: 100%;
+	left: 50%;
+	top: 50%;
+	transform: translate(-55%, 0);
+	margin-top: 3em;
+}
+
+.slider-cost {
+	margin-bottom: 1em;
+}
+
+.slider-cost span {
+	font-size: 22px;
+}
+
+.slider-money span {
+	font-size: 18px;
+	transform: rotate(-40deg);
+}
+
+.slider-cost span:first-child,
+.slider-money span:first-child {
+	margin-left: 29px;
+}
+
+.slider-cost span:nth-child(2) {
+	margin-left: 21px;
+}
+
+.slider-cost span:nth-child(3) {
+	margin-left: 60px;
+}
+
+.slider-money span:nth-child(3) {
+	margin-left: 35px;
+}
+
+.slider-cost span:nth-child(4) {
+	margin-left: 130px;
+}
+
+.slider-money span:nth-child(4) {
+	margin-left: 115px;
+}
+
+.slider-cost span:nth-child(5) {
+	margin-left: 280px;
+}
+
+.slider-money span:nth-child(5) {
+	margin-left: 260px;
+}
+
+.slider {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	border-radius: 8px;
+	width: 680px;
+	height: 18px;
+}
+
+.slider-dots {
+	position: absolute;
+	z-index: -1;
+	left: 0;
+	display: flex;
+	transform: translateY(-15%);
+
+	span {
+		display: block;
+		background-color: $main-text;
+		transform: translateY(-15%);
+		width: 15px;
+		height: 15px;
+		border-radius: 50%;
+	}
+
+	span:first-child {
+		margin-left: 27px;
+	}
+
+	span:nth-child(2) {
+		margin-left: 23px;
+	}
+
+	span:nth-child(3) {
+		margin-left: 61px;
+	}
+
+	span:nth-child(4) {
+		margin-left: 139px;
+	}
+	span:nth-child(5) {
+		margin-left: 294px;
+	}
+}
+
+
+output {
+	position: absolute;
+	left: 50%;
+	top: 300%;
+	text-align: center;
+	transform: translate(-50%, -15%);
+	font-weight: bold;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-image: url(../img/water.svg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	width: 130px;
+	height: 130px;
+	font-size: 22px;
+	line-height: 4.5;
+}
+
+#fader {
+	position: relative;
+	left: 3px;
+	width: 680px;
+	height: 6px;
+	background: $main-text;
+	-webkit-appearance: none;
+	outline: none;
+	border-radius: 4px;
+}
+
+#fader::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	width: 25px;
+	height: 25px;
+	border-radius: 50%;
+	background:#43ABE6;
+	box-shadow: 0 0 2px #222;
+}

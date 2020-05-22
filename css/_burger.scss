@@ -25,7 +25,7 @@
         justify-content: space-between;
         align-items: center;
         height: 100%;
-        padding: .75em 0;
+        padding: .25em 0;
     }
 
     &__logo {
@@ -101,7 +101,7 @@
 
 
 .logo-img {
-    max-width: 7em;
+    max-width: 6.4em;
     width: 100%;
     margin-right: auto;
 }
@@ -185,4 +185,15 @@
             flex-basis: 35%;
         }
     }
+}
+
+
+.bgc-fff {
+    background-color: rgba(255, 255, 255, 0.95);
+    transition: all .5s;
+}
+
+.bgc-fff.bgc-fff-no {
+    background-color: transparent;
+    transition: all .5s;
 }
