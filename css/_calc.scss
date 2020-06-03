@@ -1,25 +1,204 @@
 .page-calc {
-
+    padding: 4em 0;
 }
 
 
 
-.output {
-    background-image: linear-gradient(to top, #be1112 0%, #e20c0e 100%);
-    margin-top: 10em;
+.water {
+    display: flex;
+    min-width: 0;
+
+    &__item {
+        min-width: 0;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 3px 2px 24px rgba(22, 24, 24, 0.22);
+        background-color: #f3f3f3;
+        border-radius: 5px;
+        padding: 1.5em 1.5em;
+        margin: 1em;
+        flex-basis: 33.333%;
+    }
+
+    &__img {
+        display: block;
+        margin: 0 auto;
+        width: 100%;
+        max-width: 400px;
+        transform: translateY(15%);
+
+    }
+
+    &__check-container {
+        position: relative;
+        align-self: center;
+        display: flex;
+        align-items: flex-start;
+        margin: 1em 0;
+        color: #000659;
+
+    }
+
+    &__checkbox {
+        margin-right: 0.5em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 0.45em;
+    }
+
+    &__btn-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+    }
+
+    &__cost-container {
+        font-size: 2rem;
+    }
+
+    .second-btn {
+        margin-top: 0;
+        padding-left: 1.5em;
+        padding-right: 1.5em;
+        padding-top: 0.25em;
+        padding-bottom: 0.25em;
+        font-size: 1rem;
+        flex-basis: 40%;
+    }
+
+    .slick-list {
+        overflow: hidden;
+        background-color: transperent;
+    }
+
+    .slick-track {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        min-width: 0;
+        background-color: transperent;
+
+    }
+
+    .slick-arrow {
+        font-size: 0;
+    }
+
+}
+
+.output-container1023 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
     color: #fff;
-    max-width: 350px;
+    width: 100%;
+    margin-top: 1em;
     margin-left: auto;
     margin-right: auto;
     padding: .75em 0;
-    border-radius: 38px;
+    border-radius: 5px;
     text-align: center;
-    margin-bottom: 5em;
-    
+    background-color: #e20c0e;
+
+    &__name {
+        display: flex;
+        flex-direction: column;
+    }
 }
 
-@media(max-width:720px) {
+
+
+@media(min-width:1023px) {
+
+    .output-container1023 {
+        display: none;
+    }
+}
+
+
+
+@media(max-width:1023px) {
     .page-calc {
         display: none;
+    }
+
+    .water {
+
+        &__item {
+
+            margin: 0 auto;
+            max-width: 550px;
+        }
+
+        &__checkbox {
+            display: none;
+        }
+    }
+}
+
+
+@media(max-width:375px) {
+    .water {
+        &__btn-container {
+            flex-direction: column;
+        }
+
+
+    }
+}
+
+
+.output-descr {
+    text-align: center;
+    margin-top: 2em;
+
+    &__p {
+        position: relative;
+        max-width: 50%;
+        margin: 0 auto;
+        line-height: 1.7;
+        color: $main-text;
+
+        a {
+            color: $main-text;
+            font-weight: 700;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            display: block;
+            right: 0;
+            top: 0;
+            transform: translate(100%, -100%);
+            width: 226px;
+            height: 166px;
+            background-image: url(../img/range-grass.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
+        }
+    }
+
+    &__btn {
+        margin-top: 2.5em;
+
+        .main-btn {
+            padding-left: 2em;
+            padding-right: 2em;
+            margin: 0 auto;
+        }
+    }
+}
+
+@media(max-width:1023px) {
+    .output-descr {
+        &__p {
+            &::after {
+                display: none;
+            }
+        }
     }
 }

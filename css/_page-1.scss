@@ -27,7 +27,7 @@
     &__title {
         font-size: 2.9rem;
         color: $main-text;
-        letter-spacing: .04em;
+        letter-spacing: .025em;
         font-weight: 700;
     }
 
@@ -148,4 +148,8 @@
             font-size: 2.4rem;
         }
     }
+}
+
+.cost-red {
+    color: #da0201;
 }

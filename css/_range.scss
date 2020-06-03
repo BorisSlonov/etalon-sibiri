@@ -1,10 +1,10 @@
 .range-container {
-
+	margin-top: 1em;
 	margin-left: auto;
 	margin-right: auto;
 	width: 100%;
 	display: block;
-	max-width: 680px;
+	max-width: 970px;
 	position: relative;
 	color: $main-text;
 }
@@ -13,65 +13,84 @@
 	position: absolute;
 	display: flex;
 	width: 100%;
-	left: 50%;
+	left: 0;
 	top: 50%;
-	transform: translate(-55%, 0);
 	margin-top: 3em;
 }
 
+
 .slider-cost {
 	margin-bottom: 1em;
+	text-align: left;
 }
 
 .slider-cost span {
-	font-size: 22px;
+	font-size: 24px;
 }
 
 .slider-money span {
-	font-size: 18px;
-	transform: rotate(-40deg);
+	font-size: 16px;
+
 }
 
-.slider-cost span:first-child,
+.slider-cost span:first-child {
+	margin-left: 37px;
+}
+
 .slider-money span:first-child {
 	margin-left: 29px;
 }
 
+//2
 .slider-cost span:nth-child(2) {
-	margin-left: 21px;
+	margin-left: 37px;
 }
 
+.slider-money span:nth-child(2) {
+	margin-left: 13px;
+}
+
+//2
+
+//3
 .slider-cost span:nth-child(3) {
-	margin-left: 60px;
+	margin-left: 94px;
 }
 
 .slider-money span:nth-child(3) {
-	margin-left: 35px;
+	margin-left: 68px;
 }
 
+//3
+
+//4
 .slider-cost span:nth-child(4) {
-	margin-left: 130px;
+	margin-left: 196px;
 }
 
 .slider-money span:nth-child(4) {
-	margin-left: 115px;
+	margin-left: 184px;
 }
 
+//4
+
+//5
 .slider-cost span:nth-child(5) {
-	margin-left: 280px;
+	margin-left: 413px;
 }
 
 .slider-money span:nth-child(5) {
-	margin-left: 260px;
+	margin-left: 402px;
 }
 
+//5
 .slider {
 	position: relative;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	border-radius: 8px;
-	width: 680px;
+	width: 970px;
 	height: 18px;
 }
 
@@ -92,22 +111,24 @@
 	}
 
 	span:first-child {
-		margin-left: 27px;
+		margin-left: 35px;
 	}
 
 	span:nth-child(2) {
-		margin-left: 23px;
+		margin-left: 42px;
 	}
 
 	span:nth-child(3) {
-		margin-left: 61px;
+		margin-left: 95px;
 	}
 
 	span:nth-child(4) {
-		margin-left: 139px;
+		margin-left: 208px;
+
 	}
+
 	span:nth-child(5) {
-		margin-left: 294px;
+		margin-left: 428px;
 	}
 }
 
@@ -125,16 +146,17 @@ output {
 	background-image: url(../img/water.svg);
 	background-size: cover;
 	background-repeat: no-repeat;
-	width: 130px;
-	height: 130px;
+	width: 80px;
+	height: 80px;
 	font-size: 22px;
-	line-height: 4.5;
+	color: #fff;
+	
 }
 
 #fader {
 	position: relative;
 	left: 3px;
-	width: 680px;
+	width: 970px;
 	height: 6px;
 	background: $main-text;
 	-webkit-appearance: none;
@@ -147,6 +169,32 @@ output {
 	width: 25px;
 	height: 25px;
 	border-radius: 50%;
-	background:#43ABE6;
+	background: #43ABE6;
 	box-shadow: 0 0 2px #222;
 }
+
+
+.output-container {
+	display: flex;
+	justify-content: space-around;
+	color: #fff;
+	max-width: 550px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: .75em 0;
+	border-radius: 38px;
+	text-align: center;
+	margin-top: 8.5em;
+	background-color: rgb(153, 153, 153);
+}
+
+
+@media(max-width:1023px) {
+
+	.range-container,
+	.output-container {
+		display: none;
+	}
+}
+
+

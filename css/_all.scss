@@ -23,7 +23,7 @@
 
 .h2-container {
     text-align: center;
-    margin: 3em 0;
+    margin-bottom: 3em;
     color: $main-text;
 
     &__title {
@@ -40,4 +40,24 @@
 }
 .bold {
     font-weight: 700;
+}
+
+.mt15em {
+    margin-top: 1.5em;
+}
+
+.dib {
+    display: inline-block;
+}
+
+.dn {
+    display: none;
+}
+
+@media(max-width:616px) {
+    .h2-container {
+        &__sub-title {
+            max-width: 100%;
+        }
+    }
 }
