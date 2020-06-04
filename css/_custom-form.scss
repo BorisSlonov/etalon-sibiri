@@ -20,10 +20,11 @@
     margin-right: 15px;
     border-radius: 3px;
     transition: all .3s;
+    box-shadow: 1px 1px 13px rgba(22, 24, 24, 0.13);
 }
 
 .water__checkbox input:checked+label>span {
-    border: 10px solid rgba(13, 22, 99, 0.192);
+    border: 10px solid #fff;
     animation: bounce 250ms;
 }
 
@@ -75,3 +76,114 @@
         transform: scale(1);
     }
 }
+
+
+
+
+
+
+// SELECT
+
+
+
+$background: #e74c3c;
+$select-color: #ccc;
+$select-background: #fff;
+$select-width: 190px;
+$select-height: 40px;
+
+
+.select-hidden {
+    display: none;
+    visibility: hidden;
+    padding-right: 10px;
+}
+
+.select {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    z-index: 2;
+    font-size: 16px;
+    width: $select-width;
+    height: $select-height;
+    border: 1px solid #c4c4c4;
+    border-radius: 25px;
+
+}
+
+.select-styled {
+    position: absolute;
+
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: transparent;
+    padding: 8px 15px;
+    border-radius: 25px;
+    transition: all .3s;
+
+
+    &:after {
+        content: "";
+        width: 0;
+        height: 0;
+        border: 7px solid transparent;
+        border-color: $select-color transparent transparent transparent;
+        position: absolute;
+        top: 16px;
+        right: 10px;
+    }
+
+    &:hover {
+        background-color: darken($select-background, 2);
+    }
+
+    &:active,
+    &.active {
+        background-color: darken($select-background, 5);
+        z-index: 500;
+
+        &:after {
+            top: 9px;
+            border-color: transparent transparent $select-color transparent;
+        }
+    }
+}
+
+.select-options {
+    display: none;
+    position: absolute;
+    top: 96%;
+    right: 0;
+    left: 0;
+    z-index: 1;
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    max-width: 85%;
+    background-color: darken($select-background, 5);
+    transition: all .3s;
+
+    li {
+        margin: 0;
+        padding: 12px 0;
+        text-indent: 15px;
+        border-top: 1px solid darken($select-background, 10);
+
+        &:hover {
+            color: $main-text;
+        }
+
+        &[rel="hide"] {
+            display: none;
+        }
+    }
+}
+
+
+
+

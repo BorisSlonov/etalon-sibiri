@@ -34,6 +34,8 @@
     &__profit {
         display: flex;
         margin-top: 3em;
+        color: #070707;
+        font-weight: 700;
     }
 
     &__profit-item:last-child {
@@ -55,6 +57,7 @@
             font-size: 1.2rem;
             letter-spacing: .75px;
             margin-bottom: 0.5em;
+            color: #4a4a4a;
 
             &::after {
                 content: '';

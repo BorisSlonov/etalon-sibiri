@@ -73,7 +73,7 @@
         background-repeat: no-repeat;
         padding: 0.5em .75em;
         color: $main-text;
-        border: 1px dashed #00065986;
+        border: 1px dashed rgba(0, 6, 89, 0.164);
         border-radius: 25px;
         .time {
             display: inline-block;
@@ -98,6 +98,11 @@
 
     
 
+}
+
+.icon-width {
+    margin-right: 5px;
+    transform: translateY(10%);
 }
 
 .header.out {
@@ -149,7 +154,7 @@
     .header__list {
         position: fixed;
         z-index: 1000;
-        transition: .8s;
+        transition: .4s;
         top: 0;
         right: -100%;
         width: 50%;

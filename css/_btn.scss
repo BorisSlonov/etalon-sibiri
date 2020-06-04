@@ -8,23 +8,40 @@
 .main-btn {
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: flex-end;
     max-width: 350px;
     background-image: linear-gradient(-93deg, #3ea5f9 0%, #295dff 100%);
     border-radius: 25px;
     width: 100%;
-    color: rgba(255, 255, 255, 0.836);
-    padding: .75em 0;
+    color: rgba(255, 255, 255, 0.9);
+    padding: .5em 0;
     font-weight: 700;
     transition: all .3s;
 
     &__img {
-        max-width: 25px;
+        max-width: 30px;
+        width: 100%;
+        display: inline-block;
+        vertical-align: middle;
+        fill: #fff;
+        margin-right: .75em;
     }
+
+
 
     &__span {
         align-self: center;
-        
+        margin-right: auto;
+        margin-left: auto;
+        transform: translateX(1.2em);
+        text-align: center;
+    }
+
+    .path-main-btn {
+        fill: rgba(255, 255, 255, 0.7);
+        transition: all .3s;
+     
+
     }
 
     &:hover {
@@ -35,8 +52,19 @@
         letter-spacing: .35px;
     }
 
-    
+    &:hover {
+        .path-main-btn {
+            fill: rgba(255, 255, 255, 1);
+
+        }
+    }
+
+
+
 }
+
+
+
 
 .second-btn {
     display: block;
@@ -54,7 +82,7 @@
     transition: all .3s;
 
     &:hover {
-        background-color:#43ABE6;
+        background-color: #43ABE6;
         border-color: #43ABE6;
         transform: scale(1.1);
         letter-spacing: .45px;

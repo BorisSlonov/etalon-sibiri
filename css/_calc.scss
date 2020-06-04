@@ -1,5 +1,5 @@
 .page-calc {
-    padding: 4em 0;
+    padding: 5em 0;
 }
 
 
@@ -168,7 +168,6 @@
 
 @media(max-width:1023px) {
 
-
     .water {
 
         &__item {
@@ -214,6 +213,7 @@
         margin: 0 auto;
         line-height: 1.7;
         color: $main-text;
+        font-size: 1.2rem;
 
 
 
@@ -237,8 +237,7 @@
         margin-top: 2.5em;
 
         .main-btn {
-            padding-left: 2em;
-            padding-right: 2em;
+            max-width: 270px;
             margin: 0 auto;
         }
     }
@@ -256,6 +255,10 @@
     }
 }
 
+.water-name {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: .95rem;
+}
 
 @media(max-width:768px) {
 

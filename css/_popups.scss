@@ -36,7 +36,7 @@
         position: absolute;
         right: 5px;
         top: 5px;
-       
+
     }
 
     //other
@@ -56,15 +56,30 @@
         padding-top: .5em;
         padding-bottom: .5em;
         outline: none;
+        margin-left: 0.25em;
+        margin-right: 0.25em;
     }
 
     &__input:focus {
         border-color: rgba(0, 171, 230, 0.96);
     }
+
+
+    &__row {
+        display: flex;
+    }
 }
 
 body.lock {
     overflow: hidden;
+}
+
+.fb60 {
+    flex-basis: 60%;
+}
+
+.fb40 {
+    flex-basis: 40%;
 }
 
 //animation

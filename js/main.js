@@ -188,6 +188,8 @@ jQuery(document).ready(function () {
         if (jQuery(window).scrollTop() > 50) {
             jQuery('.header').addClass('bgc-fff');
             jQuery('.header').removeClass('bgc-fff-no');
+            jQuery('.header__burger').removeClass('burger_active');
+            jQuery('.header__list').removeClass('menu_active');
         }
         else {
             jQuery('.header').addClass('bgc-fff-no');
@@ -195,11 +197,13 @@ jQuery(document).ready(function () {
     });
 
 
+    
+
     //скрываем/показываем хедер при скролле
     var header = $('.header'),
         scrollPrev = 0;
 
-    $(window).scroll(function () {
+    $(window).scroll(function hideMenu() {
         var scrolled = $(window).scrollTop();
 
         if (scrolled > 520 && scrolled > scrollPrev) {
@@ -210,10 +214,11 @@ jQuery(document).ready(function () {
         scrollPrev = scrolled;
     });
 
+   
+
 
 
     // slider
-
 
     $(window).on('load resize', function () {
         if ($(window).width() < 1023) {
@@ -368,6 +373,57 @@ jQuery(document).ready(function () {
         jQuery('.output-name-special').addClass('dn');
         jQuery('.output-name-eco').addClass('dn');
 
+    });
+
+
+
+
+    //CUSTOM SELECT 
+
+    $('select').each(function(){
+        var $this = $(this), numberOfOptions = $(this).children('option').length;
+      
+        $this.addClass('select-hidden'); 
+        $this.wrap('<div class="select"></div>');
+        $this.after('<div class="select-styled"></div>');
+    
+        var $styledSelect = $this.next('div.select-styled');
+        $styledSelect.text($this.children('option').eq(0).text());
+      
+        var $list = $('<ul />', {
+            'class': 'select-options'
+        }).insertAfter($styledSelect);
+      
+        for (var i = 0; i < numberOfOptions; i++) {
+            $('<li />', {
+                text: $this.children('option').eq(i).text(),
+                rel: $this.children('option').eq(i).val()
+            }).appendTo($list);
+        }
+      
+        var $listItems = $list.children('li');
+      
+        $styledSelect.click(function(e) {
+            e.stopPropagation();
+            $('div.select-styled.active').not(this).each(function(){
+                $(this).removeClass('active').next('ul.select-options').hide();
+            });
+            $(this).toggleClass('active').next('ul.select-options').toggle();
+        });
+      
+        $listItems.click(function(e) {
+            e.stopPropagation();
+            $styledSelect.text($(this).text()).removeClass('active');
+            $this.val($(this).attr('rel'));
+            $list.hide();
+            //console.log($this.val());
+        });
+      
+        $(document).click(function() {
+            $styledSelect.removeClass('active');
+            $list.hide();
+        });
+    
     });
 
 

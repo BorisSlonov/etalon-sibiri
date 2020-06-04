@@ -26,18 +26,24 @@
     margin-bottom: 3em;
     color: $main-text;
 
+
     &__title {
+
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 50%;
         font-weight: 900;
         font-size: 2rem;
     }
 
     &__sub-title {
-        max-width: 50%;
+        max-width: 60%;
         display: block;
         margin: 1em auto 0;
         line-height: 1.5;
     }
 }
+
 .bold {
     font-weight: 700;
 }
@@ -54,8 +60,24 @@
     display: none;
 }
 
+.main-text-opacity {
+    color: rgba(13, 22, 99, 0.637);
+}
+
+.path-icon-blue {
+    fill: rgb(13, 22, 99);
+
+}
+
+.icon-width {
+    max-width: 1em;
+}
+
 @media(max-width:616px) {
     .h2-container {
+        &__title {
+            max-width: 100%;
+        }
         &__sub-title {
             max-width: 100%;
         }
