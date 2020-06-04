@@ -6,6 +6,8 @@
 
 .water {
     display: flex;
+    align-items: center;
+    justify-content: space-between;
     min-width: 0;
 
     &__item {
@@ -18,6 +20,7 @@
         padding: 1.5em 1.5em;
         margin: 1em;
         flex-basis: 33.333%;
+        outline: none;
     }
 
     &__img {
@@ -68,9 +71,12 @@
         flex-basis: 40%;
     }
 
+
+
     .slick-list {
         overflow: hidden;
         background-color: transperent;
+
     }
 
     .slick-track {
@@ -86,6 +92,30 @@
         font-size: 0;
     }
 
+
+
+    .slick-next,
+    .slick-prev {
+        background-image: url(../img/icon/next_slider.svg);
+        background-color: #fff;
+        border-radius: 50%;
+        height: 25px;
+        width: 25px;
+        min-width: 25px;
+        border: 5px solid #fff;
+        box-shadow: 0 0 4px 2px rgba(22, 24, 24, 0.22);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+    }
+
+    .slick-prev {
+        transform: translateX(-25%) rotate(-180deg);
+    }
+
+    .slick-next {
+        transform: translateX(25%);
+    }
 }
 
 .output-container1023 {
@@ -100,15 +130,32 @@
     padding: .75em 0;
     border-radius: 5px;
     text-align: center;
-    background-color: #e20c0e;
 
     &__name {
         display: flex;
         flex-direction: column;
+        font-size: 1.2rem;
+    }
+
+    label {
+        display: inline-block;
+        font-size: 2rem;
+        margin-top: 1em;
+        font-weight: 700;
     }
 }
 
+.water-red {
+    background-color: #e20c0e;
+}
 
+.water-green {
+    background-color: #47bd4d;
+}
+
+.water-yellow {
+    background-color: #f0b30d;
+}
 
 @media(min-width:1023px) {
 
@@ -120,15 +167,13 @@
 
 
 @media(max-width:1023px) {
-    .page-calc {
-        display: none;
-    }
+
 
     .water {
 
         &__item {
-
-            margin: 0 auto;
+            box-shadow: 0 0 4px 2px rgba(22, 24, 24, 0.22);
+            margin: 6px auto;
             max-width: 550px;
         }
 
@@ -139,10 +184,14 @@
 }
 
 
-@media(max-width:375px) {
+@media(max-width:345px) {
     .water {
         &__btn-container {
             flex-direction: column;
+        }
+
+        &__cost-container {
+            margin-bottom: .75em;
         }
 
 
@@ -154,6 +203,11 @@
     text-align: center;
     margin-top: 2em;
 
+    &__link {
+        color: $main-text;
+        font-weight: 700;
+    }
+
     &__p {
         position: relative;
         max-width: 50%;
@@ -161,10 +215,7 @@
         line-height: 1.7;
         color: $main-text;
 
-        a {
-            color: $main-text;
-            font-weight: 700;
-        }
+
 
         &::after {
             content: '';
@@ -194,6 +245,8 @@
 }
 
 @media(max-width:1023px) {
+
+
     .output-descr {
         &__p {
             &::after {
@@ -201,4 +254,91 @@
             }
         }
     }
+}
+
+
+@media(max-width:768px) {
+
+    .water {
+        border-radius: 5px;
+        box-shadow: 3px 2px 24px rgba(22, 24, 24, 0.22);
+        padding: 10px;
+        background-color: #f3f3f3;
+
+        &__item {
+            box-shadow: none;
+        }
+    }
+
+    .output-descr {
+        &__p {
+            max-width: 100%;
+        }
+
+        &__link {
+            display: block;
+        }
+    }
+}
+
+
+
+//мобильный калькулятор
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+
+.quantity-block {
+    margin: auto;
+    font-size: 20px;
+    margin-top: 1em;
+}
+
+.quantity-arrow-minus,
+.quantity-arrow-plus {
+    cursor: pointer;
+    font-size: 24px;
+    font-weight: 700;
+    padding: 5px 12px;
+    width: 40px;
+    box-sizing: border-box;
+    border-radius: 50%;
+    outline: none;
+    background-color: #fff;
+    color: rgba(0, 0, 0, 0.884);
+
+
+}
+
+.quantity-arrow-plus {
+    span {
+        display: block;
+        transform: translateY(-2.5%);
+    }
+}
+
+.quantity-arrow-minus {
+    span {
+        display: block;
+        transform: translateY(-9%);
+    }
+}
+
+.quantity-num {
+    font-size: 20px;
+    padding: 5px 10px;
+    border-radius: 4px;
+    outline: none;
+    max-width: 50px;
+    text-align: center;
+    color: #fff;
 }

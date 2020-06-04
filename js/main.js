@@ -215,20 +215,18 @@ jQuery(document).ready(function () {
     // slider
 
 
-    // jQuery('.water').slick({
-    //     slidesToShow: 0,
-    //     responsive: [
-    //         {
-    //             breakpoint: 1023,
-    //             settings: {
-    //                 slidesToShow: 1,
-    //                 slidesToScroll: 1,
-    //                 infinite: true
-    //             }
-    //         }
-    //     ]
-
-    // });
+    $(window).on('load resize', function () {
+        if ($(window).width() < 1023) {
+            $('.water:not(.slick-initialized)').slick({
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                infinite: true,
+                arrows: true
+            });
+        } else {
+            $(".water.slick-initialized").slick("unslick");
+        }
+    });
 
 
 
@@ -263,14 +261,67 @@ jQuery(document).ready(function () {
     });
 
 
-    //активируем чекбоксы по клику на контейнер
-    var yourName = document.querySelector('.water__item');
-    yourName.addEventListener('click', function (event) {
-        if (event.target != event.carrentTarget && event.target.type != 'checkbox') {
-            var input = event.target.querySelector('input');
-            input.checked = !input.checked;
+
+
+
+    //калькулятор для мобильных
+
+    $(function () {
+
+        (function quantityProducts() {
+            var $quantityArrowMinus = $(".quantity-arrow-minus");
+            var $quantityArrowPlus = $(".quantity-arrow-plus");
+            var $quantityNum = $(".quantity-num");
+
+            $quantityArrowMinus.click(quantityMinus);
+            $quantityArrowPlus.click(quantityPlus);
+
+            function quantityMinus() {
+                if ($quantityNum.val() > 1) {
+                    $quantityNum.val(+$quantityNum.val() - 1);
+                }
+                $quantityNum.change();
+            }
+
+            function quantityPlus() {
+                $quantityNum.val(+$quantityNum.val() + 1);
+                $quantityNum.change();
+            }
+        })();
+
+    });
+
+
+    $(document).on('change blur click focus input', '.quantity-num', function mobileCalc() {
+        //кол-во
+        var units = $(this).val();
+        //цена
+        var cost = 250;
+        if (units >= 2) {
+            var cost = 175;
         }
-    }, false);
+        if (units >= 4) {
+            var cost = 165;
+        }
+        if (units >= 8) {
+            var cost = 160;
+        }
+        if (units >= 16) {
+            var cost = 155;
+        }
+        if (units >= 32) {
+            var cost = 150;
+        }
+
+        var score = parseFloat(cost * units);
+        score =  score + " " + "₽";
+        jQuery('.output-container1023__output label').text(score);
+        jQuery('.output-container1023__output').show();
+    });
+
+
+
+
 
 
 
@@ -320,12 +371,7 @@ jQuery(document).ready(function () {
     });
 
 
-    jQuery('.place-card').hide();
-
- 
 });
-
-
 
 
 
@@ -338,6 +384,5 @@ function ChangeColor(color) {
 document.getElementById("water-red").onclick = function () { ChangeColor("#e20c0e"); }
 document.getElementById("water-green").onclick = function () { ChangeColor("#47bd4d"); }
 document.getElementById("water-yellow").onclick = function () { ChangeColor("#f0b30d"); }
-
 
 

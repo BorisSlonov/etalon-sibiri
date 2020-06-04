@@ -152,4 +152,9 @@
 
 .cost-red {
     color: #da0201;
+    transition: all .3s;
+
+    &:hover {
+        color: lighten(#da0201, 10%);
+    }
 }

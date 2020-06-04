@@ -7,7 +7,6 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=<ваш API-ключ>" type="text/javascript"></script>
     <title>Title</title>
 </head>
 
@@ -35,7 +34,8 @@
                             <ul class='header__list'>
                                 <li class=''><a href='#popup' class='header__link'>Вода</a></li>
                                 <li class=''><a href='#works' class='header__link'>Кулеры и аксессуары</a></li>
-                                <li class=''><a href='#team' class='header__link'>Акции</a></li>
+                                <li class=''><a href='#team' class='header__link'><span
+                                            class="cost-red">Акции</span></a></li>
                                 <li class=''><a href='#test' class='header__link'>Сертификаты</a></li>
                                 <li>
                                     <!-- time -->
@@ -187,7 +187,7 @@
 
 
                         <!-- output-container1023 -->
-                        <div class="output-container1023">
+                        <div class="output-container1023 water-red">
                             <div class="output-container1023__name">
                                 <span class="bold">Вода питьевая «Эко»</span>
                                 <span>Эталон Сибири 19 л</span>
@@ -195,7 +195,11 @@
                             <div class="output-container1023__output">
                                 <!-- stepper -->
                                 <div class="score">
-                                    <input type="number" class="numb" id="1" value="1">
+                                    <div class="quantity-block">
+                                        <button class="quantity-arrow-plus"><span>+</span></button>
+                                        <input class="quantity-num" type="number" value="1" min="1" max="35"">
+                                        <button class="quantity-arrow-minus"><span>-</span></button>
+                                    </div>
                                 </div>
                                 <!-- stepper -->
                                 <label><span>250 ₽</span></label>
@@ -244,6 +248,27 @@
                         </div>
                         <!-- water-btn -->
 
+                        <!-- output-container1023 -->
+                        <div class="output-container1023 water-green">
+                            <div class="output-container1023__name">
+                                <span class="bold">Вода питьевая «Эко»</span>
+                                <span>Эталон Сибири 19 л</span>
+                            </div>
+                            <div class="output-container1023__output">
+                                <!-- stepper -->
+                                <div class="score">
+                                    <div class="quantity-block">
+                                        <button class="quantity-arrow-plus"><span>+</span></button>
+                                        <input class="quantity-num" type="number" value="1" min=1 max=35>
+                                        <button class="quantity-arrow-minus"><span>-</span></button>
+                                    </div>
+                                </div>
+                                <!-- stepper -->
+                                <label><span>250 ₽</span></label>
+                            </div>
+                        </div>
+                        <!-- output-container1023 -->
+
                     </div>
                     <!-- item -->
 
@@ -285,6 +310,27 @@
                         </div>
                         <!-- water-btn -->
 
+
+                        <!-- output-container1023 -->
+                        <div class="output-container1023 water-yellow">
+                            <div class="output-container1023__name">
+                                <span class="bold">Вода питьевая «Эко»</span>
+                                <span>Эталон Сибири 19 л</span>
+                            </div>
+                            <div class="output-container1023__output">
+                                <!-- stepper -->
+                                <div class="score">
+                                    <div class="quantity-block">
+                                        <button class="quantity-arrow-plus"><span>+</span></button>
+                                        <input class="quantity-num" type="number" value="1" min=1 max=35>
+                                        <button class="quantity-arrow-minus"><span>-</span></button>
+                                    </div>
+                                </div>
+                                <!-- stepper -->
+                                <label><span>250 ₽</span></label>
+                            </div>
+                        </div>
+                        <!-- output-container1023 -->
                     </div>
                     <!-- item -->
                 </div>
@@ -342,7 +388,7 @@
                         <span>Эталон Сибири 19 л</span>
                     </div>
                     <div class="output-container__output">
-                        <label>1 шт <span>250 ₽</span></label>
+                        <label><span>1 шт 250 ₽</span></label>
                     </div>
                 </div>
                 <!-- output-container -->
@@ -352,7 +398,7 @@
                         <!-- text -->
                         <p class="output-descr__p">
                             При больших (индивидуальных) объемах заказа уточняйте особые
-                            условия у оператора по номеру телефона <a href="tel:+79993006612"">8 999 300 66 12</a>
+                            условия у оператора по номеру телефона <a class="output-descr__link" href="tel:+79993006612"">8 999 300 66 12</a>
                         </p>
                         <!-- text -->
 
@@ -516,7 +562,8 @@
                         <ul class='footer__list'>
                             <li class=''><a href='#popup' class='footer__link'>Вода</a></li>
                             <li class=''><a href='#works' class='footer__link'>Кулеры и аксессуары</a></li>
-                            <li class=''><a href='#team' class='footer__link'>Акции</a></li>
+                            <li class=''><a href='#team' class='footer__link'><span class="cost-red">Акции</span></a>
+                            </li>
                             <li class=''><a href='#test' class='footer__link'>Сертификаты</a></li>
                             <li>
                                 <!-- time -->
