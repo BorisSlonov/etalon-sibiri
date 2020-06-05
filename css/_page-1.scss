@@ -38,6 +38,16 @@
         font-weight: 700;
     }
 
+    &__profit-item {
+        display: flex;
+        align-items: center;
+    }
+
+    &__profit-img {
+        
+        margin-right: 5px;
+    }
+
     &__profit-item:last-child {
         margin-left: 2em;
     }

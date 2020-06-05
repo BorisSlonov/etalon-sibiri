@@ -197,7 +197,7 @@ jQuery(document).ready(function () {
     });
 
 
-    
+
 
     //скрываем/показываем хедер при скролле
     var header = $('.header'),
@@ -214,7 +214,7 @@ jQuery(document).ready(function () {
         scrollPrev = scrolled;
     });
 
-   
+
 
 
 
@@ -236,93 +236,26 @@ jQuery(document).ready(function () {
 
 
 
+    //tabs
+    (function($) {
+        $(function() {
+          $("ul.tabs__caption").on("click", "li:not(.active)", function() {
+            $(this)
+              .addClass("active")
+              .siblings()
+              .removeClass("active")
+              .closest("div.tabs")
+              .find("div.tabs__content")
+              .removeClass("active")
+              .eq($(this).index())
+              .addClass("active");
+          });
+        });
+      })(jQuery);
+ 
 
 
 
-    //calc
-    jQuery('#fader').change(function () {
-        var units = jQuery('#volume').val();
-        var cost = 250;
-        if (units >= 2) {
-            var cost = 175;
-        }
-        if (units >= 4) {
-            var cost = 165;
-        }
-        if (units >= 8) {
-            var cost = 160;
-        }
-        if (units >= 16) {
-            var cost = 155;
-        }
-        if (units >= 32) {
-            var cost = 150;
-        }
-
-        var score = parseFloat(cost * units);
-        score = units + " " + "шт" + " " + score + " " + "₽";
-        jQuery('.output-container__output label').text(score);
-        jQuery('.output-container__output').show();
-    });
-
-
-
-
-
-    //калькулятор для мобильных
-
-    $(function () {
-
-        (function quantityProducts() {
-            var $quantityArrowMinus = $(".quantity-arrow-minus");
-            var $quantityArrowPlus = $(".quantity-arrow-plus");
-            var $quantityNum = $(".quantity-num");
-
-            $quantityArrowMinus.click(quantityMinus);
-            $quantityArrowPlus.click(quantityPlus);
-
-            function quantityMinus() {
-                if ($quantityNum.val() > 1) {
-                    $quantityNum.val(+$quantityNum.val() - 1);
-                }
-                $quantityNum.change();
-            }
-
-            function quantityPlus() {
-                $quantityNum.val(+$quantityNum.val() + 1);
-                $quantityNum.change();
-            }
-        })();
-
-    });
-
-
-    $(document).on('change blur click focus input', '.quantity-num', function mobileCalc() {
-        //кол-во
-        var units = $(this).val();
-        //цена
-        var cost = 250;
-        if (units >= 2) {
-            var cost = 175;
-        }
-        if (units >= 4) {
-            var cost = 165;
-        }
-        if (units >= 8) {
-            var cost = 160;
-        }
-        if (units >= 16) {
-            var cost = 155;
-        }
-        if (units >= 32) {
-            var cost = 150;
-        }
-
-        var score = parseFloat(cost * units);
-        score =  score + " " + "₽";
-        jQuery('.output-container1023__output label').text(score);
-        jQuery('.output-container1023__output').show();
-    });
 
 
 
@@ -380,50 +313,50 @@ jQuery(document).ready(function () {
 
     //CUSTOM SELECT 
 
-    $('select').each(function(){
+    $('select').each(function () {
         var $this = $(this), numberOfOptions = $(this).children('option').length;
-      
-        $this.addClass('select-hidden'); 
+
+        $this.addClass('select-hidden');
         $this.wrap('<div class="select"></div>');
         $this.after('<div class="select-styled"></div>');
-    
+
         var $styledSelect = $this.next('div.select-styled');
         $styledSelect.text($this.children('option').eq(0).text());
-      
+
         var $list = $('<ul />', {
             'class': 'select-options'
         }).insertAfter($styledSelect);
-      
+
         for (var i = 0; i < numberOfOptions; i++) {
             $('<li />', {
                 text: $this.children('option').eq(i).text(),
                 rel: $this.children('option').eq(i).val()
             }).appendTo($list);
         }
-      
+
         var $listItems = $list.children('li');
-      
-        $styledSelect.click(function(e) {
+
+        $styledSelect.click(function (e) {
             e.stopPropagation();
-            $('div.select-styled.active').not(this).each(function(){
+            $('div.select-styled.active').not(this).each(function () {
                 $(this).removeClass('active').next('ul.select-options').hide();
             });
             $(this).toggleClass('active').next('ul.select-options').toggle();
         });
-      
-        $listItems.click(function(e) {
+
+        $listItems.click(function (e) {
             e.stopPropagation();
             $styledSelect.text($(this).text()).removeClass('active');
             $this.val($(this).attr('rel'));
             $list.hide();
             //console.log($this.val());
         });
-      
-        $(document).click(function() {
+
+        $(document).click(function () {
             $styledSelect.removeClass('active');
             $list.hide();
         });
-    
+
     });
 
 

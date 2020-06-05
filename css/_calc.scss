@@ -3,7 +3,6 @@
 }
 
 
-
 .water {
     display: flex;
     align-items: center;
@@ -19,7 +18,7 @@
         border-radius: 5px;
         padding: 1.5em 1.5em;
         margin: 1em;
-        flex-basis: 33.333%;
+        flex-basis: 29%;
         outline: none;
     }
 
@@ -27,7 +26,7 @@
         display: block;
         margin: 0 auto;
         width: 100%;
-        max-width: 400px;
+        max-width: 280px;
         transform: translateY(15%);
 
     }
@@ -205,6 +204,7 @@
     &__link {
         color: $main-text;
         font-weight: 700;
+        white-space: nowrap;
     }
 
     &__p {
@@ -300,14 +300,14 @@ input[type="number"] {
 }
 
 
-.quantity-block {
+[class^="quantity-block"] {
     margin: auto;
     font-size: 20px;
     margin-top: 1em;
 }
 
-.quantity-arrow-minus,
-.quantity-arrow-plus {
+[class^="quantity-arrow-minus-"],
+[class^="quantity-arrow-plus-"] {
     cursor: pointer;
     font-size: 24px;
     font-weight: 700;
@@ -318,25 +318,27 @@ input[type="number"] {
     outline: none;
     background-color: #fff;
     color: rgba(0, 0, 0, 0.884);
+    box-shadow: 1px 1px 13px rgba(22, 24, 24, 0.33);
 
 
 }
 
-.quantity-arrow-plus {
+
+[class^="quantity-arrow-plus"] {
     span {
         display: block;
         transform: translateY(-2.5%);
     }
 }
 
-.quantity-arrow-minus {
+[class^="quantity-arrow-minus-"] {
     span {
         display: block;
         transform: translateY(-9%);
     }
 }
 
-.quantity-num {
+[class^="quantity-num"] {
     font-size: 20px;
     padding: 5px 10px;
     border-radius: 4px;

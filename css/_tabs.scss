@@ -1,0 +1,79 @@
+.tabs__content {
+    display: none;
+    min-height: 500px;
+    min-width: 100%;
+  
+    /* по умолчанию прячем все блоки */
+}
+
+.tabs__content.active {
+    display: block;
+    /* по умолчанию показываем нужный блок */
+}
+
+
+.tabs {
+    text-align: left;
+    margin-left: 3em;
+    margin-top: 2em;
+    overflow: auto;
+    width: 100%;
+    color: $main-text;
+    &__caption {
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 2em;
+        position: sticky;
+    }
+
+    &__link {
+        border: 1px solid transparent;
+        padding: 0.5em 2em;
+        border-radius: 25px;
+        color: #3c3f81c0;
+        transition: all .3s;
+        &:hover {
+            cursor: pointer;
+            border-color:#3c3f81;
+            color: #3c3f81;
+        }
+    }
+    &__link.active {
+        color: #3c3f81;
+        border: 1px solid #3c3f81;
+    }
+
+    &__title {
+        color: $main-text;
+        text-align: left;
+        font-size: 1.4rem;
+
+    }
+
+    &__p {
+        color: $main-text;
+        margin-top: .75em;
+    }
+
+    &__list {
+        color: $main-text;
+        list-style-type: disc;
+        margin-left: 1.2em;
+    }
+
+    &__li {
+        margin-top: 0.5em;
+    }
+}
+
+
+@media(max-width:916px) {
+    .tabs {
+        margin-left: 0;
+
+        &__content {
+            min-height: 100%;
+        }
+    }
+
+}

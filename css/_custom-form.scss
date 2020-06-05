@@ -109,18 +109,18 @@ $select-height: 40px;
     height: $select-height;
     border: 1px solid #c4c4c4;
     border-radius: 25px;
-
+    padding: .5em 0; 
 }
 
 .select-styled {
     position: absolute;
-
+   
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
     background-color: transparent;
-    padding: 8px 15px;
+    padding: .5em 15px;
     border-radius: 25px;
     transition: all .3s;
 
@@ -183,7 +183,4 @@ $select-height: 40px;
         }
     }
 }
-
-
-
 
