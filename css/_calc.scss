@@ -26,14 +26,13 @@
         display: block;
         margin: 0 auto;
         width: 100%;
-        max-width: 280px;
-        transform: translateY(15%);
+        max-width: 170px;
+       
 
     }
 
     &__check-container {
         position: relative;
-        align-self: center;
         display: flex;
         align-items: flex-start;
         margin: 1em 0;
@@ -209,7 +208,7 @@
 
     &__p {
         position: relative;
-        max-width: 50%;
+        max-width: 80%;
         margin: 0 auto;
         line-height: 1.7;
         color: $main-text;
@@ -223,7 +222,7 @@
             display: block;
             right: 0;
             top: 0;
-            transform: translate(100%, -100%);
+            transform: translate(55%, -105%);
             width: 226px;
             height: 166px;
             background-image: url(../img/range-grass.png);

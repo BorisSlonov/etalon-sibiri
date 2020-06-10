@@ -31,7 +31,7 @@
 
         margin-left: auto;
         margin-right: auto;
-        max-width: 50%;
+        max-width: 70%;
         font-weight: 900;
         font-size: 2rem;
     }
@@ -60,6 +60,10 @@
     display: none;
 }
 
+.align-center {
+    text-align: center;
+}
+
 .main-text-opacity {
     color: rgba(13, 22, 99, 0.637);
 }
@@ -82,4 +86,7 @@
             max-width: 100%;
         }
     }
+}
+.fa-ruble-sign {
+    font-size: calc(100% - 10%);
 }

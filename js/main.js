@@ -199,23 +199,25 @@ jQuery(document).ready(function () {
 
 
 
-    //скрываем/показываем хедер при скролле
-    var header = $('.header'),
-        scrollPrev = 0;
+    //range-slider
+    var $element = $('input[type="range"]');
 
-    $(window).scroll(function hideMenu() {
-        var scrolled = $(window).scrollTop();
+    $element
+        .rangeslider({
+            polyfill: false,
+            onInit: function () {
+                var $handle = $('.rangeslider__handle', this.$range);
+                updateHandle($handle[0], this.value);
+            }
+        })
+        .on('input', function (e) {
+            var $handle = $('.rangeslider__handle', e.target.nextSibling);
+            updateHandle($handle[0], this.value);
+        });
 
-        if (scrolled > 520 && scrolled > scrollPrev) {
-            header.addClass('out');
-        } else {
-            header.removeClass('out');
-        }
-        scrollPrev = scrolled;
-    });
-
-
-
+    function updateHandle(el, val) {
+        el.textContent = val;
+    }
 
 
     // slider
@@ -226,7 +228,8 @@ jQuery(document).ready(function () {
                 slidesToShow: 1,
                 slidesToScroll: 1,
                 infinite: true,
-                arrows: true
+                arrows: true,
+                fade: true,
             });
         } else {
             $(".water.slick-initialized").slick("unslick");
@@ -237,29 +240,21 @@ jQuery(document).ready(function () {
 
 
     //tabs
-    (function($) {
-        $(function() {
-          $("ul.tabs__caption").on("click", "li:not(.active)", function() {
-            $(this)
-              .addClass("active")
-              .siblings()
-              .removeClass("active")
-              .closest("div.tabs")
-              .find("div.tabs__content")
-              .removeClass("active")
-              .eq($(this).index())
-              .addClass("active");
-          });
+    (function ($) {
+        $(function () {
+            $("ul.tabs__caption").on("click", "li:not(.active)", function () {
+                $(this)
+                    .addClass("active")
+                    .siblings()
+                    .removeClass("active")
+                    .closest("div.tabs")
+                    .find("div.tabs__content")
+                    .removeClass("active")
+                    .eq($(this).index())
+                    .addClass("active");
+            });
         });
-      })(jQuery);
- 
-
-
-
-
-
-
-
+    })(jQuery);
 
 
 
@@ -278,15 +273,6 @@ jQuery(document).ready(function () {
 
 
     //меняем текст в зависимости от :checked
-    $('#water-green').click(function () {
-        //открываем нужный лейбл
-        jQuery('.output-name-special').addClass('dib');
-        jQuery('.output-name-special').removeClass('dn');
-        //закрываем остальные
-        jQuery('.output-name-eco').addClass('dn');
-        jQuery('.output-name-ag').addClass('dn');
-
-    });
 
     $('#water-red').click(function () {
         //открываем нужный лейбл
@@ -294,6 +280,16 @@ jQuery(document).ready(function () {
         jQuery('.output-name-eco').removeClass('dn');
         //закрываем остальные
         jQuery('.output-name-special').addClass('dn');
+        jQuery('.output-name-ag').addClass('dn');
+
+    });
+
+    $('#water-green').click(function () {
+        //открываем нужный лейбл
+        jQuery('.output-name-special').addClass('dib');
+        jQuery('.output-name-special').removeClass('dn');
+        //закрываем остальные
+        jQuery('.output-name-eco').addClass('dn');
         jQuery('.output-name-ag').addClass('dn');
 
     });
@@ -308,6 +304,21 @@ jQuery(document).ready(function () {
 
     });
 
+    //сброс цвета !:checked
+
+
+    $(function () {
+        $('.water-checkbox').on('change checked', function () {
+            if ($('.water-checkbox').is(':checked')) {
+        
+            } else {
+                $('.output-container').css({'background-color' : '#ccc'});
+                jQuery('.output-name-eco').addClass('dn');
+                jQuery('.output-name-special').addClass('dn');
+                jQuery('.output-name-ag').addClass('dn');
+            }
+        });
+    });
 
 
 

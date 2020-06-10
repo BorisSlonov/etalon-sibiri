@@ -1,8 +1,7 @@
 .tabs__content {
     display: none;
     min-height: 500px;
-    min-width: 100%;
-  
+    min-width: 100%; 
     /* по умолчанию прячем все блоки */
 }
 
@@ -76,4 +75,11 @@
         }
     }
 
+}
+
+
+.t-advantages {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }

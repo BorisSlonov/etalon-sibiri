@@ -1,0 +1,76 @@
+.page-tabs {
+    padding: 4em 0;
+    background-image: url(../img/bg-right.png);
+    background-size: cover;
+    background-position: -50% 110%;
+    background-repeat: no-repeat;
+    max-width: 100%;
+
+    .tabs {
+        margin-left: 0;
+    }
+
+
+}
+
+.t-advantages {
+    margin-top: 3em;
+    display: flex;
+    text-align: center;
+
+    &__row {
+        display: flex;
+        padding: 0 -8px;
+    }
+
+    &__item {
+        margin: 0 8px;
+        flex-basis: 50%;
+
+        span {
+            display: inline-block;
+            margin-top: 1em;
+        }
+    }
+
+    &__icon {
+        max-width: 50px;
+    }
+
+    &__title {
+        line-height: 1.5;
+    }
+
+}
+
+.fb60 {
+    max-width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media(max-width:1260px) {
+    .t-advantages {
+        flex-direction: column;
+        align-items: center;
+
+        &__row:not(:first-child) {
+            margin-top: 2em;
+        }
+
+
+    }
+
+
+    .fb60 {
+        max-width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media(max-width:768px) {
+    .page-tabs {
+        background-position: 50% 50%;
+    }
+}

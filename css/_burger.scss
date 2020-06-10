@@ -3,7 +3,7 @@
     width: 100%;
     top: 0;
     left: 0;
-    z-index: 50;
+    z-index: 9999;
     text-align: center;
     transition-property: background-color, transform;
     transition-duration: .4s;
@@ -87,6 +87,7 @@
            display: block;
            width: 100%;
            color: $main-text;
+           font-weight: 700;
        }
      
     }
@@ -112,7 +113,7 @@
 
 
 .logo-img {
-    max-width: 100px;
+    max-width: 75px;
     width: 100%;
     margin-right: auto;
     object-fit: contain;

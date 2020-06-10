@@ -8,9 +8,9 @@ body {
 }
 .container {
     width: 100%;
-    max-width: 1530px;
+    max-width: 1170px;
     margin: 0 auto;
-    padding: 0 1.25em;
+    padding: 0 15px;
 }
 
 @media(max-width:768px) {
@@ -32,9 +32,3 @@ body {
 }
 
 
-@media(min-width:2480px) {
-    html,
-    body {
-        font-size: 20px;
-    }
-}

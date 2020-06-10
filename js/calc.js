@@ -1,26 +1,36 @@
 $(document).ready(function () {
     jQuery('#fader').change(function () {
+        var rubles = jQuery('.fa-ruble-sign');
         var units = jQuery('#volume').val();
         var cost = 250;
+        $(".cost-change").text(`250 ₽`);
+     
         if (units >= 2) {
             var cost = 175;
+            $(".cost-change").text(`175 ₽`);
         }
         if (units >= 4) {
             var cost = 165;
+            $(".cost-change-").text(`165 ₽`);
         }
         if (units >= 8) {
             var cost = 160;
+            $(".cost-change").text(`160 ₽`);
         }
         if (units >= 16) {
             var cost = 155;
+            $(".cost-change").text(`155 ₽`);
         }
         if (units >= 32) {
             var cost = 150;
+            $(".cost-change").text(`150 ₽`);
         }
 
         var score = parseFloat(cost * units);
-        score = units + " " + "шт" + " " + score + " " + "₽";
-        jQuery('.output-container__output label').text(score);
+        num = units + " " + "шт" + " ";
+        finalCost = score + " " + " "  + "₽";
+        jQuery('.output-container__output #label-num').text(num);
+        jQuery('.output-container__output #label-cost').text(finalCost);
         jQuery('.output-container__output').show();
     });
 
@@ -67,20 +77,27 @@ $(document).ready(function () {
         var units = $(this).val();
         //цена
         var cost = 250;
+        $(".cost-change-red").text(`250 ₽`);
+     
         if (units >= 2) {
             var cost = 175;
+            $(".cost-change-red").text(`175 ₽`);
         }
         if (units >= 4) {
             var cost = 165;
+            $(".cost-change-red").text(`165 ₽`);
         }
         if (units >= 8) {
             var cost = 160;
+            $(".cost-change-red").text(`160 ₽`);
         }
         if (units >= 16) {
             var cost = 155;
+            $(".cost-change-red").text(`155 ₽`);
         }
         if (units >= 32) {
             var cost = 150;
+            $(".cost-change-red").text(`150 ₽`);
         }
 
         var score = parseFloat(cost * units);
@@ -132,20 +149,27 @@ $(document).ready(function () {
         var units = $(this).val();
         //цена
         var cost = 250;
+        $(".cost-change-green").text(`250 ₽`);
+     
         if (units >= 2) {
             var cost = 175;
+            $(".cost-change-green").text(`175 ₽`);
         }
         if (units >= 4) {
             var cost = 165;
+            $(".cost-change-green").text(`165 ₽`);
         }
         if (units >= 8) {
             var cost = 160;
+            $(".cost-change-green").text(`160 ₽`);
         }
         if (units >= 16) {
             var cost = 155;
+            $(".cost-change-green").text(`155 ₽`);
         }
         if (units >= 32) {
             var cost = 150;
+            $(".cost-change-green").text(`150 ₽`);
         }
 
         var score = parseFloat(cost * units);
@@ -197,20 +221,27 @@ $(document).ready(function () {
         var units = $(this).val();
         //цена
         var cost = 250;
+        $(".cost-change-yellow").text(`250 ₽`);
+     
         if (units >= 2) {
             var cost = 175;
+            $(".cost-change-yellow").text(`175 ₽`);
         }
         if (units >= 4) {
             var cost = 165;
+            $(".cost-change-yellow").text(`165 ₽`);
         }
         if (units >= 8) {
             var cost = 160;
+            $(".cost-change-yellow").text(`160 ₽`);
         }
         if (units >= 16) {
             var cost = 155;
+            $(".cost-change-yellow").text(`155 ₽`);
         }
         if (units >= 32) {
             var cost = 150;
+            $(".cost-change-yellow").text(`150 ₽`);
         }
 
         var score = parseFloat(cost * units);

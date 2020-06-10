@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700;800&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/4136378d7e.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/style.css">
     <title>Title</title>
 </head>
@@ -160,8 +161,8 @@
                         <div class="header-content__btn-container">
                             <!-- cost -->
                             <div class="header-content__cost">
-                                <span class="cost-old">250₽</span>
-                                <span class="cost-red bold">175₽</span>
+                                <span class="cost-old">250 <i class="fas fa-ruble-sign"></i></span>
+                                <span class="cost-red bold">175 <i class="fas fa-ruble-sign"></i></span>
                             </div>
                             <!-- cost -->
 
@@ -247,7 +248,7 @@
                         <!-- water-btn -->
                         <div class="water__btn-container">
                             <div class="water__cost-container">
-                                <span class="cost-red bold">175 Р</span>
+                                <span class="cost-change cost-change-red cost-red bold">250 ₽</span>
                             </div>
                             <div class="water__btn-container">
                                 <a href="#popup_more" class="second-btn popup-link">Подробнее</a>
@@ -310,7 +311,7 @@
                         <!-- water-btn -->
                         <div class="water__btn-container">
                             <div class="water__cost-container">
-                                <span class="cost-red bold">175 Р</span>
+                                <span class="cost-change cost-change-green cost-red bold">250 ₽</span>
                             </div>
                             <div class="water__btn-container">
                                 <a href="#popup_more" class="second-btn popup-link">Подробнее</a>
@@ -372,7 +373,7 @@
                         <!-- water-btn -->
                         <div class="water__btn-container">
                             <div class="water__cost-container">
-                                <span class="cost-red bold">175 Р</span>
+                                <span class="cost-change cost-change-yellow cost-red bold">250 ₽</span>
                             </div>
                             <div class="water__btn-container">
                                 <a href="#popup_more" class="second-btn popup-link">Подробнее</a>
@@ -419,12 +420,13 @@
                             </div>
 
                             <div class="slider">
-                                <div class="output-wrapper">
-                                    <output for="fader" id="volume">1</output>
+                                <div style="display: none;" class="output-wrapper">
+                                    <output for="rangeslider__handle" id="volume">1</output>
                                 </div>
 
                                 <input type="range" id="fader" min="1" max="35" value="0" step="1"
                                     oninput="outputUpdate(value)">
+
 
                                 <div class="slider-dots">
                                     <span></span>
@@ -459,7 +461,8 @@
                                 <span class="water-name">Эталон Сибири 19 л</span>
                             </div>
                             <div class="output-container__output">
-                                <label><span>1 шт 250 ₽</span></label>
+                                <label id="label-num"><span>1 шт </span></label>
+                                <label id="label-cost"><span>250 ₽</span></label>
                             </div>
                         </div>
                         <!-- output-container -->
@@ -563,6 +566,8 @@
 
 
 
+
+
         <!-- page-tabs -->
 
         <section class="page-tabs">
@@ -571,10 +576,250 @@
                 <div class="h2-container">
                     <h2 class="h2-container__title">Полезная вода из самой
                         глубины Сибирской породы</h2>
-
                 </div>
                 <!-- h2-container -->
+
+                <!-- tabs -->
+                <div class="tabs">
+
+                    <ul class="tabs__caption">
+                        <li class="tabs__link active">О воде</li>
+                        <li class="tabs__link">О нас</li>
+                        <li class="tabs__link">Польза воды</li>
+                    </ul>
+
+                    <div class="tabs__content active">
+                        <!-- title -->
+                        <h3 class="tabs__title">Вода питьевая «Эко»</h3>
+                        <!-- title -->
+                        <p class="tabs__p">
+                            Артезианская вода высшей категории качества.
+                            Добывается с глубины 143 метра и проходит 5 этапов очистки
+                        </p>
+                        <!-- p -->
+                        <p class="tabs__p">
+                            Подходит для ежедневного употреблени, людьми любого возраста.
+                            Может служить основой для приготовления напитков и блюд.
+                        </p>
+                        <!-- list -->
+                        <ul class="tabs__list">
+                            <li class="tabs__li"> Нормализует обмен веществ</li>
+                            <li class="tabs__li">Снимает чувство усталости</li>
+                            <li class="tabs__li">Утоляет жажду</li>
+                            <li class="tabs__li">Сбалансированный состав макро- и микроэлементов</li>
+                        </ul>
+                        <!-- list -->
+                        <p class="tabs__p">
+                            <span class="bold">Источник:</span> скважина №152Д, Кемеровская обл, г. Юрга.
+                        </p>
+                        <!-- p -->
+                        <p class="tabs__p">
+                            <span class="bold">Срок годности </span> в закрытом виде до 6 месяцев.
+                            После вскрытия, рекомендуется использовать в течение 30 дней.
+                        </p>
+                    </div>
+
+                    <div class="tabs__content">
+                        <!-- title -->
+                        <h3 class="tabs__title">Химический состав</h3>
+                        <!-- title -->
+
+                        <!-- table-inner -->
+                        <div class="table-structure-inner">
+                            <!-- table -->
+                            <div class="table-structure">
+                                <!-- row1 -->
+                                <div class="table-structure__row">
+                                    <!-- item -->
+                                    <div class="table-structure__item">
+                                        <span>Общая минерализация, мг/л </span>
+                                    </div>
+                                    <!-- item -->
+                                    <!-- item -->
+                                    <div class="table-structure__item">
+                                        <span>50-700</span>
+                                    </div>
+                                    <!-- item -->
+                                </div>
+                                <!-- row1 -->
+                                <!-- row2 -->
+                                <div class="table-structure__row">
+                                    <!-- item -->
+                                    <div class="table-structure__item">
+                                        <span>Общая жесткость, мг-экв/л</span>
+                                    </div>
+                                    <!-- item -->
+                                    <!-- item -->
+                                    <div class="table-structure__item">
+                                        <span>не более 1,5</span>
+                                    </div>
+                                    <!-- item -->
+                                </div>
+                                <!-- row2 -->
+
+                                <h4 class="table-structure__h4">
+                                    Содержание основных ионов и катионов
+                                    мг/л; не более
+                                </h4>
+
+                                <!-- row3 -->
+                                <div class="table-structure__row">
+                                    <!-- item -->
+                                    <div class="table-structure__item">
+                                        <span>Гидрокарбонаты (HCO3-)</span>
+                                    </div>
+                                    <!-- item -->
+                                    <!-- item -->
+                                    <div class="table-structure__item">
+                                        <span>400</span>
+                                    </div>
+                                    <!-- item -->
+                                </div>
+                                <!-- row3 -->
+
+                                <!-- row3 -->
+                                <div class="table-structure__row">
+                                    <!-- item -->
+                                    <div class="table-structure__item">
+                                        <span>Хлориды (Cl-)</span>
+                                    </div>
+                                    <!-- item -->
+                                    <!-- item -->
+                                    <div class="table-structure__item">
+                                        <span>250</span>
+                                    </div>
+                                    <!-- item -->
+                                </div>
+                                <!-- row3 -->
+
+                                <!-- row5 -->
+                                <div class="table-structure__row">
+                                    <!-- item -->
+                                    <div class="table-structure__item">
+                                        <span>Кальций (Ca2+)</span>
+                                    </div>
+                                    <!-- item -->
+                                    <!-- item -->
+                                    <div class="table-structure__item">
+                                        <span>20</span>
+                                    </div>
+                                    <!-- item -->
+                                </div>
+                                <!-- row5 -->
+
+                                <!-- row6 -->
+                                <div class="table-structure__row">
+                                    <!-- item -->
+                                    <div class="table-structure__item">
+                                        <span>Магний (Mg2+)</span>
+                                    </div>
+                                    <!-- item -->
+                                    <!-- item -->
+                                    <div class="table-structure__item">
+                                        <span>10</span>
+                                    </div>
+                                    <!-- item -->
+                                </div>
+                                <!-- row6 -->
+                            </div>
+                            <!-- table -->
+                        </div>
+                        <!-- table-inner -->
+                    </div>
+
+
+
+
+
+
+                    <!-- tab-item -->
+                    <div class="tabs__content">
+                      
+
+                        <p class="tabs__p align-center">
+                            Артезианская природная вода является источником элементов, необходимых для здоровья
+                            человека. Она содержит целый комплекс минеральных веществ и микроэлементов, в регулярном
+                            поступлении которых так нуждается наш организм и является одним из наиболее доступных
+                            способов позаботиться об укреплении своего здоровья и здоровья близких, особенно детей.
+                            <br><br>
+                            Практически полное отсутствие кальция, магния, йода, фтора и других полезных микроэелментов
+                            в питьевой воде многих регионов России служит фактором риска для развития ряда различных
+                            заболеваний, а так же ухудшению общего самочувствия человека
+
+                        </p>
+                        <br><br>
+                        <p class="tabs__p fb60 align-center bold">
+                            Экологически чистая и богатая полезными микроэлементами артезианская вода придется по вкусу
+                            всем, кто заботится о своем здоровье!
+                        </p>
+
+                        <div class="t-advantages">
+                            <!-- row -->
+                            <div class="t-advantages__row">
+                                <!-- item -->
+                                <div class="t-advantages__item">
+                                    <img src="img/icon/doctor.svg" alt="" class="t-advantages__icon">
+                                    <h3 class="t-advantages__title">
+                                        Омолаживание <br>
+                                        организма
+                                    </h3>
+                                    <span>
+                                        Способствует быстрой доставке питательных веществ в клетки кожи
+                                    </span>
+                                </div>
+                                <!-- item -->
+                                <!-- item -->
+                                <div class="t-advantages__item">
+                                    <img src="img/icon/doctor.svg" alt="" class="t-advantages__icon">
+                                    <h3 class="t-advantages__title">
+                                        Профилактика <br>
+                                        заболеваний
+                                    </h3>
+                                    <span>
+                                        Вода играет важную роль в поддеражинии имунитета человека
+                                    </span>
+                                </div>
+                                <!-- item -->
+                            </div>
+                            <!-- row -->
+                              <!-- row -->
+                              <div class="t-advantages__row">
+                                <!-- item -->
+                                <div class="t-advantages__item">
+                                    <img src="img/icon/doctor.svg" alt="" class="t-advantages__icon">
+                                    <h3 class="t-advantages__title">
+                                        Уменьшает <br>
+                                        стресс
+                                    </h3>
+                                    <span>
+                                        Необходимое содержание воды и полезных веществ в организме влияют и на наши эмоции
+                                    </span>
+                                </div>
+                                <!-- item -->
+                                <!-- item -->
+                                <div class="t-advantages__item">
+                                    <img src="img/icon/doctor.svg" alt="" class="t-advantages__icon">
+                                    <h3 class="t-advantages__title">
+                                        Очистка <br>
+                                        организма
+                                    </h3>
+                                    <span>
+                                        Вода выводит вредные токсины и шлаки из организма человека
+                                    </span>
+                                </div>
+                                <!-- item -->
+                            </div>
+                            <!-- row -->
+                        </div>
+
+                    </div>
+                    <!-- tab-item -->
+
+                </div>
+                <!-- tabs -->
+
             </div>
+            <!-- container -->
         </section>
 
         <!-- page-tabs -->
@@ -1088,15 +1333,18 @@
     <!-- popUp_More -->
 
 
-    
+
 
     <!-- POPUPS -->
 
 
 
     <!-- scripts -->
-    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> -->
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"
+        integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/rangeslider.js/2.3.0/rangeslider.min.js"></script>
     <script src="js/slick.min.js"></script>
     <!-- main js -->
     <script src='js/calc.js'></script>

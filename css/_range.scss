@@ -34,11 +34,11 @@
 }
 
 .slider-cost span:first-child {
-	margin-left: 37px;
+	margin-left: 40px;
 }
 
 .slider-money span:first-child {
-	margin-left: 29px;
+	margin-left: 32px;
 }
 
 //2
@@ -54,7 +54,7 @@
 
 //3
 .slider-cost span:nth-child(3) {
-	margin-left: 94px;
+	margin-left: 92px;
 }
 
 .slider-money span:nth-child(3) {
@@ -65,22 +65,22 @@
 
 //4
 .slider-cost span:nth-child(4) {
-	margin-left: 196px;
+	margin-left: 192px;
 }
 
 .slider-money span:nth-child(4) {
-	margin-left: 184px;
+	margin-left: 176px;
 }
 
 //4
 
 //5
 .slider-cost span:nth-child(5) {
-	margin-left: 413px;
+	margin-left: 409px;
 }
 
 .slider-money span:nth-child(5) {
-	margin-left: 402px;
+	margin-left: 399px;
 }
 
 //5
@@ -111,11 +111,11 @@
 	}
 
 	span:first-child {
-		margin-left: 35px;
+		margin-left: 40px;
 	}
 
 	span:nth-child(2) {
-		margin-left: 42px;
+		margin-left: 40px;
 	}
 
 	span:nth-child(3) {
@@ -123,68 +123,33 @@
 	}
 
 	span:nth-child(4) {
-		margin-left: 208px;
+		margin-left: 202px;
 
 	}
 
 	span:nth-child(5) {
-		margin-left: 428px;
+		margin-left: 422px;
 	}
 }
 
 
-output {
-	position: absolute;
-	left: 50%;
-	top: 300%;
-	text-align: center;
-	transform: translate(-50%, -25%);
-	font-weight: bold;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	background-image: url(../img/water.svg);
-	background-size: cover;
-	background-repeat: no-repeat;
-	width: 80px;
-	height: 80px;
-	font-size: 22px;
-	color: #fff;
-}
 
-#fader {
-	position: relative;
-	left: 3px;
-	width: 970px;
-	height: 6px;
-	background: $main-text;
-	-webkit-appearance: none;
-	outline: none;
-	border-radius: 4px;
-}
-
-#fader::-webkit-slider-thumb {
-	-webkit-appearance: none;
-	width: 25px;
-	height: 25px;
-	border-radius: 50%;
-	background: #43ABE6;
-	box-shadow: 0 0 2px #222;
-}
 
 
 .output-container {
 	display: flex;
 	justify-content: space-around;
+	align-items: center;
 	color: #fff;
-	max-width: 550px;
+	max-width: 600px;
 	margin-left: auto;
 	margin-right: auto;
 	padding: .75em 0;
 	border-radius: 38px;
 	text-align: center;
-	margin-top: 8.5em;
+	margin-top: 4.5em;
 	background-color: rgb(153, 153, 153);
+	line-height: 1.5;
 }
 
 
@@ -197,3 +162,54 @@ output {
 }
 
 
+
+
+.rangeslider,
+input[type='range'] {
+	max-width: 970px;
+	width: 100%;
+	height: 7px !important;
+	background-color: $main-text;
+	border-radius: 5px;
+}
+
+
+
+
+.rangeslider__handle {
+	position: absolute;
+	top: 0;
+	height: 42px;
+	width: 42px;
+	border-radius: 50%;
+	text-align: center;
+	font-size: 1.2rem;
+	line-height: 40px;
+	background-image: linear-gradient(to top, #00abe6 0%, #8be1ff 100%);
+	color: #fff;
+	transform: translateY(-40%);
+
+
+
+	&:after {
+		background: 0;
+
+	}
+
+	&:hover {
+		cursor: pointer;
+	}
+}
+
+#label-cost {
+	font-size: 1.8rem;
+	font-weight: 700;
+}
+
+#label-num {
+	font-size: 1.3rem;
+}
+
+.water-name {
+	margin-left: 0.5em;
+}
