@@ -4,7 +4,7 @@
 	margin-right: auto;
 	width: 100%;
 	display: block;
-	max-width: 970px;
+	max-width: 1100px;
 	position: relative;
 	color: $main-text;
 }
@@ -34,53 +34,53 @@
 }
 
 .slider-cost span:first-child {
-	margin-left: 40px;
+	margin-left: 45px;
 }
 
 .slider-money span:first-child {
-	margin-left: 32px;
+	margin-left: 34px;
 }
 
 //2
 .slider-cost span:nth-child(2) {
-	margin-left: 37px;
+	margin-left: 43px;
 }
 
 .slider-money span:nth-child(2) {
-	margin-left: 13px;
+	margin-left: 19px;
 }
 
 //2
 
 //3
 .slider-cost span:nth-child(3) {
-	margin-left: 92px;
+	margin-left: 108px;
 }
 
 .slider-money span:nth-child(3) {
-	margin-left: 68px;
+	margin-left: 86px;
 }
 
 //3
 
 //4
 .slider-cost span:nth-child(4) {
-	margin-left: 192px;
+	margin-left: 222px;
 }
 
 .slider-money span:nth-child(4) {
-	margin-left: 176px;
+	margin-left: 210px;
 }
 
 //4
 
 //5
 .slider-cost span:nth-child(5) {
-	margin-left: 409px;
+	margin-left: 468px;
 }
 
 .slider-money span:nth-child(5) {
-	margin-left: 399px;
+	margin-left: 457px;
 }
 
 //5
@@ -90,7 +90,7 @@
 	flex-direction: column;
 	align-items: center;
 	border-radius: 8px;
-	width: 970px;
+	width: 1100px;
 	height: 18px;
 }
 
@@ -103,32 +103,32 @@
 
 	span {
 		display: block;
-		background-color: $main-text;
-		transform: translateY(-15%);
-		width: 15px;
-		height: 15px;
+		background-image: linear-gradient(to top, #00003c 0%, #012c84 100%);
+		transform: translateY(-15.5%);
+		width: 14px;
+		height: 14px;
 		border-radius: 50%;
 	}
 
 	span:first-child {
-		margin-left: 40px;
+		margin-left: 44px;
 	}
 
 	span:nth-child(2) {
-		margin-left: 40px;
+		margin-left: 49px;
 	}
 
 	span:nth-child(3) {
-		margin-left: 95px;
+		margin-left: 110px;
 	}
 
 	span:nth-child(4) {
-		margin-left: 202px;
+		margin-left: 235px;
 
 	}
 
 	span:nth-child(5) {
-		margin-left: 422px;
+		margin-left: 482px;
 	}
 }
 
@@ -144,7 +144,7 @@
 	max-width: 600px;
 	margin-left: auto;
 	margin-right: auto;
-	padding: .75em 0;
+	padding: .5em 0;
 	border-radius: 38px;
 	text-align: center;
 	margin-top: 4.5em;
@@ -166,11 +166,13 @@
 
 .rangeslider,
 input[type='range'] {
-	max-width: 970px;
+	max-width: 1100px;
 	width: 100%;
-	height: 7px !important;
-	background-color: $main-text;
+	height: 5px !important;
+	background-image: linear-gradient(to top, #00003c 0%, #012c84 100%);
 	border-radius: 5px;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 

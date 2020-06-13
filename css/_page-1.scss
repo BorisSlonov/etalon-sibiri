@@ -4,16 +4,17 @@
     background-image: url(../img/bg-1.png);
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: 60% 100%;
     padding-bottom: 2em;
+    padding-top: 4em;
 }
 
 .header-content {
     display: flex;
-    padding-top: 100px;
+    padding-top: 90px;
     height: 100%;
 
     &__item:first-child {
-        margin-top: 2%;
         position: relative;
         z-index: 5;
         height: 100%;
@@ -29,11 +30,12 @@
         color: $main-text;
         letter-spacing: .025em;
         font-weight: 700;
+        line-height: 1.4;
     }
 
     &__profit {
         display: flex;
-        margin-top: 3em;
+        margin-top: 2.5em;
         color: #070707;
         font-weight: 700;
     }
@@ -43,9 +45,7 @@
         align-items: center;
     }
 
-    &__profit-img {
-        
-        margin-right: 5px;
+    &__profit-img {   
     }
 
     &__profit-item:last-child {
@@ -73,11 +73,11 @@
                 content: '';
                 position: absolute;
                 top: 50%;
-                transform: translate(-15%, -50%) rotate(-20deg);
+                transform: translate(-12%, -50%) rotate(-16deg);
                 display: block;
-                width: 40%;
+                width: 46%;
                 height: 1px;
-                background-color: #000;
+                background-color: #4a4a4a;
             }
 
         }
@@ -98,8 +98,8 @@
         width: 100%;
         object-fit: contain;
         position: absolute;
-        max-width: 850px;
-        right: 0;
+        max-width: 780px;
+        right: 2em;
         bottom: 0;
     }
 }
@@ -137,7 +137,7 @@
     .header-content {
         &__img {
            max-width: 600px;
-         
+         right: 0;
         }
     }
 }

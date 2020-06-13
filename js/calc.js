@@ -1,37 +1,38 @@
 $(document).ready(function () {
     jQuery('#fader').change(function () {
-        var rubles = jQuery('.fa-ruble-sign');
         var units = jQuery('#volume').val();
         var cost = 250;
-        $(".cost-change").text(`250 ₽`);
-     
+        var costChange = jQuery(".cost-change").text(`250 ₽`);
+      
+
         if (units >= 2) {
             var cost = 175;
-            $(".cost-change").text(`175 ₽`);
+            costChange.text(`175 ₽`);
         }
         if (units >= 4) {
             var cost = 165;
-            $(".cost-change-").text(`165 ₽`);
+            costChange.text(`165 ₽`);
         }
         if (units >= 8) {
             var cost = 160;
-            $(".cost-change").text(`160 ₽`);
+            costChange.text(`160 ₽`);
         }
         if (units >= 16) {
             var cost = 155;
-            $(".cost-change").text(`155 ₽`);
+            costChange.text(`155 ₽`);
         }
         if (units >= 32) {
             var cost = 150;
-            $(".cost-change").text(`150 ₽`);
+            costChange.text(`150 ₽`);
         }
 
         var score = parseFloat(cost * units);
         num = units + " " + "шт" + " ";
-        finalCost = score + " " + " "  + "₽";
+        finalCost = score + " " + " " + "₽";
         jQuery('.output-container__output #label-num').text(num);
         jQuery('.output-container__output #label-cost').text(finalCost);
         jQuery('.output-container__output').show();
+
     });
 
 
@@ -78,7 +79,7 @@ $(document).ready(function () {
         //цена
         var cost = 250;
         $(".cost-change-red").text(`250 ₽`);
-     
+
         if (units >= 2) {
             var cost = 175;
             $(".cost-change-red").text(`175 ₽`);
@@ -150,7 +151,7 @@ $(document).ready(function () {
         //цена
         var cost = 250;
         $(".cost-change-green").text(`250 ₽`);
-     
+
         if (units >= 2) {
             var cost = 175;
             $(".cost-change-green").text(`175 ₽`);
@@ -222,7 +223,7 @@ $(document).ready(function () {
         //цена
         var cost = 250;
         $(".cost-change-yellow").text(`250 ₽`);
-     
+
         if (units >= 2) {
             var cost = 175;
             $(".cost-change-yellow").text(`175 ₽`);

@@ -1,16 +1,82 @@
 .page-tabs {
+    position: relative;
     padding: 4em 0;
-    background-image: url(../img/bg-right.png);
-    background-size: cover;
-    background-position: -50% 110%;
+    background-image: url(../img/bg-right-tabs.png);
+    background-size: contain;
+    background-position: 520px 50%;
     background-repeat: no-repeat;
     max-width: 100%;
+
+    &__leaves {
+        position: absolute;
+        z-index: -1;
+        width: 100%;
+        max-width: 300px;
+    }
 
     .tabs {
         margin-left: 0;
     }
 
+    h2 {
+        max-width: 50%;
+    }
 
+    .tabs__caption {
+        justify-content: center;
+    }
+
+
+}
+
+
+.tabs {
+    &__about {
+        display: flex;
+        align-items: flex-start;
+    }
+
+    &__about-text {
+        flex-basis: 100%;
+
+        .tabs__p:first-child {
+            margin-top: 0;
+        }
+    }
+
+    &__list-about {
+        display: flex;
+        margin-top: 1.25em;
+    }
+
+    &__li-about {
+        display: flex;
+        align-items: flex-start;
+
+        img {
+            transform: translateY(50%);
+            margin-right: 0.25em;
+        }
+    }
+
+    &__li-about:nth-child(2) {
+        margin: 0 0.5em;
+    }
+
+    &__about-img-div {
+        margin-right: 1.5em;
+        flex-basis: 150%;
+    }
+}
+
+
+
+@media(max-width:1024px) {
+    .page-tabs {
+        h2 {
+            max-width: 100%;
+        }
+    }
 }
 
 .t-advantages {
@@ -66,6 +132,18 @@
         max-width: 80%;
         margin-left: auto;
         margin-right: auto;
+    }
+}
+
+@media(max-width:1186px) {
+    .page-tabs {
+        background-size: cover;
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+
+        &__leaves {
+            display: none;
+        }
     }
 }
 

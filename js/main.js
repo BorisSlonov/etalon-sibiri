@@ -32,7 +32,7 @@ window.addEventListener('DOMContentLoaded', () => {
 const popupLinks = document.querySelectorAll('.popup-link');
 const body = document.querySelector('body');
 const lockPadding = document.querySelectorAll('.lock-padding');
-const timeout = 800;
+const timeout = 500;
 let unlock = true;
 
 // Удаление хеша из popupName
