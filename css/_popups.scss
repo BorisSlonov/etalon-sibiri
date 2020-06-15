@@ -27,7 +27,7 @@
         background-color: #fff;
         color: #000;
         width: 100%;
-        max-width: 650px;
+        max-width: 720px;
         padding: 2em .75em;
         transform: translate(0px, 25%);
         transition: all .5s;
@@ -47,7 +47,7 @@
         display: flex;
         flex-direction: column;
         width: 100%;
-        max-width: 340px;
+        max-width: 400px;
         margin: 1em auto 0;
         transition: all .5s;
 
@@ -55,7 +55,7 @@
 
     &__input {
         margin-top: 1.5em;
-        border: 1px solid #c4c4c4;
+        border: 1px solid #1b1b1b;
         border-radius: 25px;
         padding-left: 1.25em;
         height: 40px;
@@ -69,10 +69,10 @@
 
     &__textarea {
         margin-top: 1.5em;
-        border: 1px solid #c4c4c4;
+        border: 1px solid #1b1b1b;
         border-radius: 25px;
         padding-left: 1.25em;
-        padding-top: 1.5em;
+        padding-top: .75em;
         padding-bottom: 1.5em;
         outline: none;
         resize: none;
@@ -181,6 +181,10 @@ body.lock {
     background-repeat: no-repeat;
     background-position: -5em -5em;
 
+    .main-btn {
+        max-width: 100%;
+    }
+
 }
 
 //popupOrder
@@ -217,7 +221,8 @@ body.lock {
     max-width: 950px;
     background-image: url(../img/bg-right.png);
     background-repeat: no-repeat;
-    background-position: 138% -63%;
+    background-size: cover;
+    background-position: -150% 50%;
 }
 
 
@@ -297,5 +302,16 @@ body.lock {
     #popup_more .popup__content {
 
         background-position: 100% -1%;
+    }
+}
+
+#popup_order .main-btn {
+   margin-left: auto;
+   margin-right: auto;
+   width: 100%;
+   max-width: 100%;
+
+    &__span {
+        transform: 0;
     }
 }

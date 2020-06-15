@@ -52,6 +52,7 @@
     &__li-about {
         display: flex;
         align-items: flex-start;
+        font-size: 1rem;
 
         img {
             transform: translateY(50%);
@@ -65,7 +66,7 @@
 
     &__about-img-div {
         margin-right: 1.5em;
-        flex-basis: 150%;
+        flex-basis: 80%;
     }
 }
 

@@ -1,11 +1,12 @@
 .footer {
-    position: sticky;
+    padding: .5em 0;
     width: 100%;
     top: 0;
     left: 0;
-    z-index: 50;
+    z-index: 9999;
     text-align: center;
-    padding: 2em 0;
+    transition-property: background-color, transform;
+    transition-duration: .4s;
 
 
     //plashka
@@ -27,6 +28,7 @@
         align-items: center;
         height: 100%;
         padding: .25em 0;
+        
     }
 
     &__logo {
@@ -34,14 +36,17 @@
     }
 
     &__menu {
-        flex-basis: 85%;
+        flex-basis: 90%;
     }
 
     &__list {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        
         flex-basis: 100%;
+
+       
     }
 
     &__link {
@@ -61,23 +66,61 @@
         display: none;
     }
 
-    &__contacts {
-        flex-basis: 25%;
-        display: flex;
-        justify-content: space-between;
-    }
+   
 
     &__time {
+        display: flex;
         background-position: 50% 50%;
         background-size: contain;
         background-repeat: no-repeat;
         padding: 0.5em .75em;
         color: $main-text;
-        border: 1px dashed #00065986;
+        border: 1px dashed rgba(0, 6, 89, 0.164);
         border-radius: 25px;
+        .time {
+            display: inline-block;
+            margin-right: 5px;
+        }
+        
     }
 
+    &__callback {
+       a {
+           display: block;
+           width: 100%;
+           color: $main-text;
+           font-weight: 700;
+       }
+     
+    }
+
+    &__icon {
+        max-width: 18px;
+        margin-right: 5px;
+    }
+
+    
+
 }
+
+.icon-width {
+    margin-right: 5px;
+    transform: translateY(10%);
+}
+
+.footer.out {
+    transform: translateY(-100%);
+}
+
+
+
+.logo-img {
+    max-width: 75px;
+    width: 100%;
+    margin-right: auto;
+    object-fit: contain;
+}
+
 
 @media(max-width:1170px) {
     .footer {
@@ -92,33 +135,32 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-
-            .btn-call {
-                margin: 0;
-            }
         }
-    }
-}
 
-@media(max-width:1023px) {
-    .footer {
         &__body {
             flex-direction: column;
         }
 
-        &__menu {
-            flex-basis: 100%;
-            width: 100%;
-        }
-
         &__list {
-            display: flex;
-            justify-content: center;
             flex-wrap: wrap;
-
-            li {
-                margin: 15px;
-            }
+            justify-content: space-around;
         }
+
+        &__link {
+            display: inline-block;
+            margin: 20px 5px;
+        }
+    }
+}
+
+
+
+
+
+@media(max-width:768px) {
+    .logo-img {
+        max-width: 50px;
+        max-height: 60px;
+        width: 100%;
     }
 }

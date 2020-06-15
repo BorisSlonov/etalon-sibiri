@@ -99,7 +99,7 @@
 	z-index: -1;
 	left: 0;
 	display: flex;
-	transform: translateY(-15%);
+	transform: translateY(-16%);
 
 	span {
 		display: block;
@@ -180,6 +180,7 @@ input[type='range'] {
 
 .rangeslider__handle {
 	position: absolute;
+	z-index: 10;
 	top: 0;
 	height: 42px;
 	width: 42px;
