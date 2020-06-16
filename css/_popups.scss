@@ -104,7 +104,7 @@
 
     &__bottle-div {
         width: 100%;
-        flex-basis: 40%;
+        flex-basis: 50%;
     }
 
     &__flex-container {
@@ -129,7 +129,7 @@
 
     &__more-img {
         width: 100%;
-        max-width: 220px;
+        max-width: 160px;
 
     }
 }
@@ -229,7 +229,7 @@ body.lock {
 .table-structure-inner {
     width: 100%;
     padding: 1em;
-    border: 1px solid #c9c9c9;
+    border: 2px solid #c9c9c9;
     border-radius: 5px;
     margin-top: 1em;
 }
