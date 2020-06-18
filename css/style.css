@@ -906,8 +906,8 @@ body.lock {
   }
 }
 
-.fa-ruble-sign {
-  font-size: calc(100% - 10%);
+.output-container1023__output .ruble {
+  font-size: 2rem;
 }
 
 .btn-call {
