@@ -6,6 +6,15 @@ body {
     font-family: 'Open Sans';
     line-height: 1.5;
 }
+.ruble,
+#ruble {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+.ruble-400 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+}
 .container {
     width: 100%;
     max-width: 1170px;

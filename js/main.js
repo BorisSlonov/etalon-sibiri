@@ -223,7 +223,7 @@ jQuery(document).ready(function () {
     // slider
 
     $(window).on('load resize', function () {
-        if ($(window).width() < 1023) {
+        if ($(window).width() < 1130) {
             $('.water:not(.slick-initialized)').slick({
                 slidesToShow: 1,
                 slidesToScroll: 1,
@@ -236,6 +236,22 @@ jQuery(document).ready(function () {
         }
     });
 
+
+    $('.stocks').slick({
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        infinite: true,
+        arrows: true,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                }
+            }
+        ]
+    });
 
 
 
@@ -310,9 +326,9 @@ jQuery(document).ready(function () {
     $(function () {
         $('.water-checkbox').on('change checked', function () {
             if ($('.water-checkbox').is(':checked')) {
-        
+
             } else {
-                $('.output-container').css({'background-color' : '#ccc'});
+                $('.output-container').css({ 'background-color': '#ccc' });
                 jQuery('.output-name-eco').addClass('dn');
                 jQuery('.output-name-special').addClass('dn');
                 jQuery('.output-name-ag').addClass('dn');

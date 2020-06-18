@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700;800&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/4136378d7e.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <title>Title</title>
 </head>
@@ -161,8 +161,8 @@
                         <div class="header-content__btn-container">
                             <!-- cost -->
                             <div class="header-content__cost">
-                                <span class="cost-old">250 <i class="fas fa-ruble-sign"></i></span>
-                                <span class="cost-red bold">175 <i class="fas fa-ruble-sign"></i></span>
+                                <span class="cost-old">250 <span class="ruble">₽</span></span>
+                                <span class="cost-red bold">175 <span class="ruble">₽</span></span>
                             </div>
                             <!-- cost -->
 
@@ -248,7 +248,8 @@
                         <!-- water-btn -->
                         <div class="water__btn-container">
                             <div class="water__cost-container">
-                                <span class="cost-change cost-change-red cost-red bold">250 ₽</span>
+                                <span class="cost-change cost-change-red cost-red bold">200</span><span
+                                    class="ruble cost-red">₽</span>
                             </div>
                             <div class="water__btn-container">
                                 <a href="#popup_more" class="second-btn popup-link">Подробнее</a>
@@ -273,7 +274,7 @@
                                     </div>
                                 </div>
                                 <!-- stepper -->
-                                <label class="label-red"><span>250 ₽</span></label>
+                                <label class="label-red"><span>200 <span class="ruble">₽</span></span></label>
                             </div>
                         </div>
                         <!-- output-container1023 -->
@@ -311,7 +312,8 @@
                         <!-- water-btn -->
                         <div class="water__btn-container">
                             <div class="water__cost-container">
-                                <span class="cost-change cost-change-green cost-red bold">250 ₽</span>
+                                <span class="cost-change cost-change-green cost-red bold">200</span><span
+                                    class="ruble cost-red">₽</span>
                             </div>
                             <div class="water__btn-container">
                                 <a href="#popup_more" class="second-btn popup-link">Подробнее</a>
@@ -335,7 +337,7 @@
                                     </div>
                                 </div>
                                 <!-- stepper -->
-                                <label class="label-green"><span>250 ₽</span></label>
+                                <label class="label-green"><span>200 <span class="ruble">₽</span></span></label>
                             </div>
                         </div>
                         <!-- output-container1023 -->
@@ -373,7 +375,8 @@
                         <!-- water-btn -->
                         <div class="water__btn-container">
                             <div class="water__cost-container">
-                                <span class="cost-change cost-change-yellow cost-red bold">250 ₽</span>
+                                <span class="cost-change cost-change-yellow cost-red bold">200</span><span
+                                    class="ruble cost-red">₽</span>
                             </div>
                             <div class="water__btn-container">
                                 <a href="#popup_more" class="second-btn popup-link">Подробнее</a>
@@ -398,7 +401,7 @@
                                     </div>
                                 </div>
                                 <!-- stepper -->
-                                <label class=" label-yellow"><span>250 ₽</span></label>
+                                <label class=" label-yellow"><span>200 <span class="ruble">₽</span></span></label>
                                     </div>
                                 </div>
                                 <!-- output-container1023 -->
@@ -438,63 +441,64 @@
                             </div>
 
 
-                            <div class="slider-money">
-                                <span>175 ₽</span>
-                                <span>165 ₽</span>
-                                <span>160 ₽</span>
-                                <span>155 ₽</span>
-                                <span>150 ₽</span>
-                            </div>
+                            <span class="slider-money">
+                                <span class="slider-money__span-ml">175 <span class="ruble">₽</span></span>
+                                <span class="slider-money__span-ml">165 <span class="ruble">₽</span></span>
+                                <span class="slider-money__span-ml">160 <span class="ruble">₽</span></span>
+                                <span class="slider-money__span-ml">155 <span class="ruble">₽</span></span>
+                                <span class="slider-money__span-ml">150 <span class="ruble">₽</span></span>
                         </div>
-                        <!-- range-container -->
+                    </div>
+                    <!-- range-container -->
 
 
-                        <!-- output-container -->
-                        <div class="output-container">
-                            <div class="output-container__name">
-                                <span class="bold">Вода питьевая
-                                    <span class="output-name-eco dn">«Эко»</span>
-                                    <span class="output-name-special dn">«Особая»</span>
-                                    <span class="output-name-ag dn">«AG+»</span>
-                                </span>
+                    <!-- output-container -->
+                    <div class="output-container">
+                        <div class="output-container__name">
+                            <span class="bold">Вода питьевая
+                                <span class="output-name-eco dn">«Эко»</span>
+                                <span class="output-name-special dn">«Особая»</span>
+                                <span class="output-name-ag dn">«AG+»</span>
+                            </span>
 
-                                <span class="water-name">Эталон Сибири 19 л</span>
-                            </div>
-                            <div class="output-container__output">
-                                <label id="label-num"><span>1 шт </span></label>
-                                <label id="label-cost"><span>250 ₽</span></label>
-                            </div>
+                            <span class="water-name">Эталон Сибири 19 л</span>
                         </div>
-                        <!-- output-container -->
+                        <div class="output-container__output">
+                            <label id="label-num"><span>1 шт</span></label>
+                            <label id="label-cost"><span>200</span> </label>
+                            <label class="label-ruble ruble"><span class="ruble">₽</span></label>
+                        </div>
+                    </div>
+                    <!-- output-container -->
 
-                        <div class="container">
-                            <div class="output-descr">
-                                <!-- text -->
-                                <p class="output-descr__p">
-                                    При больших (индивидуальных) объемах заказа уточняйте особые
-                                    условия у оператора по номеру телефона <a class="output-descr__link"
-                                        href="tel:+79993006612"">8 999 300 66 12</a>
+                    <div class="container">
+                        <div class="output-descr">
+                            <!-- text -->
+                            <p class="output-descr__p">
+                                При больших (индивидуальных) объемах заказа уточняйте особые
+                                условия у оператора по номеру телефона <a class="output-descr__link"
+                                    href="tel:+79993006612"">8 999 300 66 12</a>
                         </p>
                         <!-- text -->
 
                         <!-- btn -->
                         <div class=" output-descr__btn">
-                                        <a href="#popup_order" class="main-btn popup-link">
-                                            <span class="main-btn__span">Оформить заказ</span>
-                                            <picture>
-                                                <svg class="main-btn__img" viewBox="-18 -18 572.00902 572" width="572pt"
-                                                    xmlns="http://www.w3.org/2000/svg">
-                                                    <path class="path-main-btn"
-                                                        d="m279.628906 143.855469c-4.851562-4.855469-12.7226-4.855469-17.582031 0-4.855469 4.851562-4.855469 12.726562 0 17.582031l94.164063 94.164062h-250.191407c-6.886719 0-12.472656 5.585938-12.472656 12.472657 0 6.890625 5.585937 12.472656 12.472656 12.472656h250.066407l-94.164063 94.164063c-2.335937 2.328124-3.648437 5.496093-3.648437 8.792968 0 3.300782 1.3125 6.460938 3.648437 8.792969 2.335937 2.355469 5.535156 3.660156 8.855469 3.617187 3.308594-.015624 6.484375-1.3125 8.851562-3.617187l115.367188-115.363281c2.347656-2.351563 3.65625-5.542969 3.621094-8.859375-.023438-3.308594-1.320313-6.472657-3.621094-8.851563zm0 0" />
-                                                    <path class="path-main-btn"
-                                                        d="m268.15625-.0742188c-108.457031-.0195312-206.242188 65.3085938-247.746094 165.5117188-41.496094 100.207031-18.542968 215.542969 58.171875 292.210938 104.703125 104.703124 274.453125 104.703124 379.152344 0 104.699219-104.695313 104.699219-274.445313 0-379.148438-50.167969-50.453125-118.429687-78.746094-189.578125-78.5742188zm0 511.3554688c-134.074219 0-243.203125-109.132812-243.203125-243.207031s109.128906-243.203125 243.203125-243.203125 243.207031 109.128906 243.207031 243.203125-109.132812 243.207031-243.207031 243.56207031zm0 0" />
-                                                </svg>
-                                            </picture>
-                                        </a>
-                            </div>
-                            <!-- btn -->
+                                    <a href="#popup_order" class="main-btn popup-link">
+                                        <span class="main-btn__span">Оформить заказ</span>
+                                        <picture>
+                                            <svg class="main-btn__img" viewBox="-18 -18 572.00902 572" width="572pt"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path class="path-main-btn"
+                                                    d="m279.628906 143.855469c-4.851562-4.855469-12.7226-4.855469-17.582031 0-4.855469 4.851562-4.855469 12.726562 0 17.582031l94.164063 94.164062h-250.191407c-6.886719 0-12.472656 5.585938-12.472656 12.472657 0 6.890625 5.585937 12.472656 12.472656 12.472656h250.066407l-94.164063 94.164063c-2.335937 2.328124-3.648437 5.496093-3.648437 8.792968 0 3.300782 1.3125 6.460938 3.648437 8.792969 2.335937 2.355469 5.535156 3.660156 8.855469 3.617187 3.308594-.015624 6.484375-1.3125 8.851562-3.617187l115.367188-115.363281c2.347656-2.351563 3.65625-5.542969 3.621094-8.859375-.023438-3.308594-1.320313-6.472657-3.621094-8.851563zm0 0" />
+                                                <path class="path-main-btn"
+                                                    d="m268.15625-.0742188c-108.457031-.0195312-206.242188 65.3085938-247.746094 165.5117188-41.496094 100.207031-18.542968 215.542969 58.171875 292.210938 104.703125 104.703124 274.453125 104.703124 379.152344 0 104.699219-104.695313 104.699219-274.445313 0-379.148438-50.167969-50.453125-118.429687-78.746094-189.578125-78.5742188zm0 511.3554688c-134.074219 0-243.203125-109.132812-243.203125-243.207031s109.128906-243.203125 243.203125-243.203125 243.207031 109.128906 243.207031 243.203125-109.132812 243.207031-243.207031 243.56207031zm0 0" />
+                                            </svg>
+                                        </picture>
+                                    </a>
                         </div>
+                        <!-- btn -->
                     </div>
+                </div>
 
 
 
@@ -582,7 +586,6 @@
 
                 <!-- tabs -->
                 <div class="tabs">
-
                     <ul class="tabs__caption">
                         <li class="tabs__link active">О воде</li>
                         <li class="tabs__link">О нас</li>
@@ -590,15 +593,10 @@
                     </ul>
                     <!-- tab-item -->
                     <div class="tabs__content active">
-
                         <div class="tabs__about">
-
                             <div class="tabs__about-img-div">
                                 <img class="tabs__about-img" src="img/page-tabs-photo.png" alt="">
-
-
                             </div>
-
                             <div class="tabs__about-text">
                                 <p class="tabs__p bold">
                                     Питьевая артезианская вода Эталон Сибири добывается из самых недр Сибирской природы
@@ -610,7 +608,6 @@
                                     Глубина скважины позволяет полностью исключить попадание любых загрязняющих веществ
                                     до водного горизонта. Дополнительно к этому вода, после поступления в цех проходит
                                     многостадийную систему очистки.
-
                                 </p>
                                 <p class="tabs__p">
                                     Вода фильтруется на фильтрах механической очистки от взвешенных веществ и осадка,
@@ -618,112 +615,118 @@
                                     обуславливающих жесткость воды. Затем вода фильтруется на угольном фильтре и
                                     поступает для дальнейшей очистки на установку обратного осмоса, где из нее удаляются
                                     все встречающиеся вредные примеси.
-
-
                                 </p>
                                 <p class="tabs__p">
                                     Все процессы очистки и розлива воды автоматизированы оборудованием Канадского
                                     производства и позволяет исключить "человеческий фактор" до момента погрузки бутылей
                                     в машину.
                                 </p>
-
-                       
-
                             </div>
-
-                           
-
                         </div>
 
 
-                                  <!-- list -->
-                                  <ul class="tabs__list-about">
-                                    <li class="tabs__li-about">
-                                        <img src="img/icon/elips.png" alt="">
-                                        <span>Вода высшей категории отлично утоляет жажду с пользой для организма</span>
-                                    </li>
-                                    <li class="tabs__li-about">
-                                        <img src="img/icon/elips.png" alt="">
-                                        <span>Идеально подходит для повседневного использования
-                                            и приготовления пищи</span>
-                                    </li>
-                                    <li class="tabs__li-about">
-                                        <img src="img/icon/elips.png" alt="">
-                                        <span>Артезианскую воду можно пить любому человеку, вне зависимости от
-                                            возраста</span>
-                                    </li>
-                                </ul>
-                                <!-- list -->
+                        <!-- list -->
+                        <ul class="tabs__list-about">
+                            <li class="tabs__li-about fb50">
+                                <img src="img/icon/elips.png" alt="">
+                                <span>Вода высшей категории отлично утоляет жажду с пользой для организма</span>
+                            </li>
+                            <li class="tabs__li-about fb50">
+                                <img src="img/icon/elips.png" alt="">
+                                <span>Идеально подходит для повседневного использования
+                                    и приготовления пищи</span>
+                            </li>
+                            <li class="tabs__li-about fb50">
+                                <img src="img/icon/elips.png" alt="">
+                                <span>Артезианскую воду можно пить любому человеку, вне зависимости от
+                                    возраста</span>
+                            </li>
+                        </ul>
+                        <!-- list -->
 
                     </div>
                     <!-- tab-item -->
+
+
+
+
                     <!-- tab-item2 -->
                     <div class="tabs__content">
 
                         <div class="tabs__about">
 
                             <div class="tabs__about-img-div">
-                                <img class="tabs__about-img" src="img/page-tabs-photo.png" alt="">
+                                <img class="tabs__about-img" src="img/tabs-about-btl.jpg" alt="">
 
 
                             </div>
 
                             <div class="tabs__about-text">
-                                <p class="tabs__p bold">
-                                    Питьевая артезианская вода Эталон Сибири добывается из самых недр Сибирской природы
-                                    из артезианской скважины с глубины 143 м, которая находится в Кемеровской области
-                                    городе Юрга.
+
+                                <h3 class="tabs__title">Чистая вода за лучшую цену
+                                </h3>
+
+                                <p class="tabs__p bold lh15">
+                                    Лучшая цена получается за счет правильной оптимизации логистики. Мы развозим воду
+                                    нашим клиентам по собственной системе доставки.
                                 </p>
                                 <!-- p -->
-                                <p class="tabs__p">
-                                    Глубина скважины позволяет полностью исключить попадание любых загрязняющих веществ
-                                    до водного горизонта. Дополнительно к этому вода, после поступления в цех проходит
-                                    многостадийную систему очистки.
+                                <p class="tabs__p color70">
+
+                                    Что позволяет, установить общую стоимость за <span class="bold">1 бутыль</span> воды
+                                    на <span class="bold">25% дешевле</span>
+                                    чем у других компаний. На сегодня <span class="bold">2 бутылки</span> воды высшей
+                                    категории с доставкой
+                                    обойдется <span class="bold">185 рублей</span> за бутылку, это на <span
+                                        class="bold">23%</span> дешевле остальных предложений в
+                                    г.Новосибирск, а при заказе 4-х бутылей цена будет всего <span class="bold">175
+                                        рублей</span>.
 
                                 </p>
-                                <p class="tabs__p">
-                                    Вода фильтруется на фильтрах механической очистки от взвешенных веществ и осадка,
-                                    умягчается на ионообменных фильтрах, освобождается от солей кальция и магния,
-                                    обуславливающих жесткость воды. Затем вода фильтруется на угольном фильтре и
-                                    поступает для дальнейшей очистки на установку обратного осмоса, где из нее удаляются
-                                    все встречающиеся вредные примеси.
-
-
-                                </p>
-                                <p class="tabs__p">
-                                    Все процессы очистки и розлива воды автоматизированы оборудованием Канадского
-                                    производства и позволяет исключить "человеческий фактор" до момента погрузки бутылей
-                                    в машину.
-
-                                </p>
-
-                       
-
                             </div>
-
-                           
-
                         </div>
 
 
-                                  <!-- list -->
-                                  <ul class="tabs__list-about">
-                                    <li class="tabs__li-about">
-                                        <img src="img/icon/elips.png" alt="">
-                                        <span>Вода высшей категории отлично утоляет жажду с пользой для организма</span>
-                                    </li>
-                                    <li class="tabs__li-about">
-                                        <img src="img/icon/elips.png" alt="">
-                                        <span>Идеально подходит для повседневного использования
-                                            и приготовления пищи</span>
-                                    </li>
-                                    <li class="tabs__li-about">
-                                        <img src="img/icon/elips.png" alt="">
-                                        <span>Артезианскую воду можно пить любому человеку, вне зависимости от
-                                            возраста</span>
-                                    </li>
-                                </ul>
-                                <!-- list -->
+                        <!-- list -->
+                        <ul class="tabs__list-about">
+                            <li class="tabs__li-about">
+                                <div class="points-flex">
+                                    <h3 class="points-flex__title">
+                                        Бесплатная <br>
+                                        доставка
+                                    </h3>
+                                    <span class="points-flex__span">Вы оплачиваете только за воду</span>
+                                </div>
+
+                                <div class="points-flex">
+                                    <h3 class="points-flex__title">
+                                        Удобная <br>
+                                        оплата
+                                    </h3>
+                                    <span class="points-flex__span"> Наличный и
+                                        безналичный расчет</span>
+                                </div>
+                            </li>
+
+                            <li class="tabs__li-about">
+                                <div class="points-flex">
+                                    <h3 class="points-flex__title">
+                                        Доставка <br>
+                                        до дверей
+                                    </h3>
+                                    <span class="points-flex__span">Поднимем даже если у вас нет лифта</span>
+                                </div>
+
+                                <div class="points-flex">
+                                    <h3 class="points-flex__title">
+                                        Выгодные <br>
+                                        предложения
+                                    </h3>
+                                    <span class="points-flex__span">Много различных акций и скидок</span>
+                                </div>
+                            </li>
+                        </ul>
+                        <!-- list -->
 
                     </div>
                     <!-- tab-item2 -->
@@ -758,7 +761,7 @@
                             <div class="t-advantages__row">
                                 <!-- item -->
                                 <div class="t-advantages__item">
-                                    <img src="img/icon/doctor.svg" alt="" class="t-advantages__icon">
+                                    <img src="img/icon/plastic-surgery.svg" alt="" class="t-advantages__icon">
                                     <h3 class="t-advantages__title">
                                         Омолаживание <br>
                                         организма
@@ -786,7 +789,7 @@
                             <div class="t-advantages__row">
                                 <!-- item -->
                                 <div class="t-advantages__item">
-                                    <img src="img/icon/doctor.svg" alt="" class="t-advantages__icon">
+                                    <img src="img/icon/eye.svg" alt="" class="t-advantages__icon">
                                     <h3 class="t-advantages__title">
                                         Уменьшает <br>
                                         стресс
@@ -799,7 +802,7 @@
                                 <!-- item -->
                                 <!-- item -->
                                 <div class="t-advantages__item">
-                                    <img src="img/icon/doctor.svg" alt="" class="t-advantages__icon">
+                                    <img src="img/icon/waist.svg" alt="" class="t-advantages__icon">
                                     <h3 class="t-advantages__title">
                                         Очистка <br>
                                         организма
@@ -830,6 +833,57 @@
 
 
 
+
+
+        <!-- page-stocks -->
+        <section class="page-stocks">
+
+            <div class="container">
+
+                <!-- h2-container -->
+                <div class="h2-container">
+                    <h2 class="h2-container__title">Актуальные акции и предложения</h2>
+                </div>
+                <!-- h2-container -->
+                <div class="stocks">
+
+                    <div class="stocks__item stock1">
+                        <div class="stock1__text">
+                            <h3>Бесплатная <br>
+                                аренда кулера</h3>
+                            <button class="second-btn">
+                                Подробнее
+                            </button>
+                        </div>
+
+                        <button class="second-btn dnone550">
+                            Подробнее
+                        </button>
+                    </div>
+
+
+
+                    <div class="stocks__item stock2">
+                        <div class="stock2__text">
+                            <h3>Новому клиенту <br>
+                                скидка на помпу 
+                            </h3>
+                            <span class="p50-big">50%</span> <br>
+                            <span class="newCost">
+                                <span class="newCost__old">500 <span class="ruble">₽</span></span>
+                                <span class="newCost__new">250 <span class="ruble">₽</span></span>
+                            </span>
+                            <button class="second-btn">
+                                Подробнее
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- page-stocks -->
 
 
 
@@ -1192,7 +1246,8 @@
                                         </div>
                                     </div>
                                     <!-- stepper -->
-                                    <label class="label-red"><span>250 ₽</span></label>
+                                    <div><label class="label-red"><span>250</span></label> <span
+                                            style="font-size: 1.8rem;" class="ruble bold">₽</span></div>
                                 </div>
                             </div>
                             <!-- output-container1023 -->
@@ -1377,6 +1432,7 @@
     <!-- wrapper -->
 
 
+    <span style="display: none;" id="ruble">₽</span>
 
     <!-- scripts -->
 

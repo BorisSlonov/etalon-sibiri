@@ -76,6 +76,14 @@
 
 }
 
+@media(max-width:340px) {
+    .tabs {
+        &__link {
+            font-size: 0.9rem;
+        }
+    }
+}
+
 
 .t-advantages {
     display: flex;

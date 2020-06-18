@@ -45,19 +45,25 @@
 
     &__list-about {
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
+        width: 100%;
         margin-top: 1.25em;
     }
 
     &__li-about {
         display: flex;
         align-items: flex-start;
+        justify-content: space-around;
+        width: 100%;
         font-size: 1rem;
-        max-width: 25%;
 
         img {
             transform: translateY(40%);
             margin-right: 0.25em;
+        }
+
+        .points-flex {
+            flex-basis: 50%;
         }
     }
 
@@ -75,12 +81,44 @@
     }
 }
 
+.color70 {
+    color: rgba(13, 22, 99, .7);
+}
 
 
 @media(max-width:1024px) {
     .page-tabs {
         h2 {
             max-width: 100%;
+        }
+    }
+
+    .tabs {
+        &__about {
+            flex-direction: column;
+        }
+
+        &__list-about {
+            flex-direction: column;
+            align-items: flex-start;
+
+            li:not(:first-child) {
+                margin-top: 1.5em;
+            }
+        }
+
+        .tabs__li-about:nth-child(2) {
+            margin-left: 0;
+            margin-right: 0;
+        }
+
+        &__about-text {
+            order: 1;
+            margin-top: 1em;
+        }
+
+        &__about-img-div {
+            align-self: center;
         }
     }
 }
@@ -164,5 +202,43 @@
 @media(max-width:768px) {
     .page-tabs {
         background-position: 50% 50%;
+    }
+}
+
+.points-flex {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-left: 20px;
+
+    &__title {
+        position: relative;
+        display: flex;
+        align-items: flex-start;
+
+        &::after {
+            content: '';
+            position: absolute;
+            display: block;
+            width: 15px;
+            height: 15px;
+            background-image: url(../img/icon/elips.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            transform: translate(-120%, 50%);
+        }
+    }
+
+    &__span {
+        margin-top: .25em;
+        max-width: 70%;
+    }
+}
+
+@media(max-width:550px) {
+    .points-flex {
+        &__span {
+            max-width: 100%;
+        }
     }
 }
