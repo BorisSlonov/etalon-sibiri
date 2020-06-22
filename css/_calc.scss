@@ -2,7 +2,6 @@
     padding: 5em 0;
 }
 
-
 .water {
     display: flex;
     align-items: center;
@@ -19,7 +18,7 @@
         border-radius: 5px;
         padding: 2em 1.5em;
         margin: 1em;
-        flex-basis: 33.333%;
+        flex-basis: 28.333%;
         outline: none;
     }
 
@@ -28,15 +27,15 @@
         margin: 0 auto;
         width: 100%;
         max-width: 150px;
-       
+        margin-bottom: 0.5em;
 
     }
 
     &__check-container {
         position: relative;
         display: flex;
-        align-items: flex-start;
-        margin: 1em 0 .5em;
+        align-items: center;
+        margin: 0 0 .5em;
         color: #000659;
 
     }
@@ -51,7 +50,6 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        margin-top: 0.45em;
     }
 
     &__btn-container {
@@ -218,7 +216,7 @@
         margin: 0 auto;
         line-height: 1.7;
         color: $main-text;
-        font-size: 1.2rem;
+        font-size: 1rem;
 
 
 

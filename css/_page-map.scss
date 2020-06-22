@@ -5,20 +5,24 @@
 .map {
     position: relative;
     width: 100%;
-    flex-basis: 55%;
+    flex-basis: 65%;
 
     &__descr {
         position: absolute;
         top: 10px;
         right: 10px;
         left: 10px;
-        padding: 15px;
+        padding:10px;
         z-index: 2;
-        max-width: 100%;
+        max-width: 55%;
         background-color: rgb(255, 255, 255);
-        font-size: 0.9rem;
+        font-size: 0.85rem;
         box-shadow: 1px 1px 13px rgba(22, 24, 24, 0.13);
         color: $main-text;
+    }
+
+    &__list {
+        margin-top: 0.5em;
     }
 }
 

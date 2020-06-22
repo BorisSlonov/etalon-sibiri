@@ -38,6 +38,7 @@
         margin-top: 2.5em;
         color: #070707;
         font-weight: 700;
+        font-size: 0.9rem;
     }
 
     &__profit-item {
@@ -45,7 +46,8 @@
         align-items: center;
     }
 
-    &__profit-img {   
+    &__profit-img {  
+        margin-right: 0.5em; 
     }
 
     &__profit-item:last-child {
@@ -68,6 +70,9 @@
             letter-spacing: .75px;
             margin-bottom: 0.5em;
             color: #4a4a4a;
+            span {
+                font-weight: 400 !important;
+            }
 
             &::after {
                 content: '';
@@ -90,7 +95,7 @@
 
         .main-btn {
             margin-left: 2em;
-            max-width: 200px;
+            max-width: 230px;
         }
     }
 
