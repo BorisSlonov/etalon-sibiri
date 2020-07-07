@@ -1,5 +1,5 @@
 .range-container {
-	margin-top: 1em;
+	margin-top: 2em;
 	margin-left: auto;
 	margin-right: auto;
 	width: 100%;
@@ -16,6 +16,7 @@
 	left: 0;
 	top: 45%;
 	margin-top: 3em;
+	color: rgba(13, 22, 99, 0.699);
 }
 
 
@@ -25,7 +26,8 @@
 }
 
 .slider-cost span {
-	font-size: 16px;
+	font-size: 14px;
+	color: rgba(13, 22, 99, 0.699);
 }
 
 .slider-money__span-ml .ruble {
@@ -39,7 +41,7 @@
 }
 
 .slider-cost span:first-child {
-	margin-left: 48px;
+	margin-left: 32px;
 }
 
 .slider-money .slider-money__span-ml:first-child {
@@ -48,7 +50,7 @@
 
 //2
 .slider-cost span:nth-child(2) {
-	margin-left: 48px;
+	margin-left: 19px;
 }
 
 .slider-money .slider-money__span-ml:nth-child(2) {
@@ -59,7 +61,7 @@
 
 //3
 .slider-cost span:nth-child(3) {
-	margin-left: 111px;
+	margin-left: 85px;
 }
 
 .slider-money .slider-money__span-ml:nth-child(3) {
@@ -70,7 +72,7 @@
 
 //4
 .slider-cost span:nth-child(4) {
-	margin-left: 231px;
+	margin-left: 201px;
 }
 
 .slider-money .slider-money__span-ml:nth-child(4) {
@@ -81,7 +83,7 @@
 
 //5
 .slider-cost span:nth-child(5) {
-	margin-left: 477px;
+	margin-left: 447px;
 }
 
 .slider-money .slider-money__span-ml:nth-child(5) {

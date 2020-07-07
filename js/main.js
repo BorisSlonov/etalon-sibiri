@@ -88,6 +88,8 @@ function popupClose(popupActive, doUnlock = true) {
             bodyUnlock();
         }
     }
+
+    
 }
 
 

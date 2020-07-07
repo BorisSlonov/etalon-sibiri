@@ -1,6 +1,6 @@
 .page-catalog {
     background-color: #f4f5fe;
-    padding: 5.5em;
+    padding: 2.5em 0;
 }
 
 .catalog {
@@ -31,7 +31,8 @@
 
     &__img {
         width: 100%;
-        max-width: 120px;
+        max-width: 80px;
+        object-fit: contain;
     }
 }
 

@@ -30,7 +30,7 @@
         color: $main-text;
         letter-spacing: .025em;
         font-weight: 700;
-        line-height: 1.4;
+        line-height: 1.1;
     }
 
     &__profit {
@@ -59,9 +59,10 @@
         flex-direction: column;
 
         .cost-red {
-            font-size: 3.5rem;
+            font-size: 3.2rem;
             color: #da0201;
             line-height: .9;
+            transform: translateX(-3%);
         }
 
         .cost-old {
@@ -95,7 +96,7 @@
 
         .main-btn {
             margin-left: 2em;
-            max-width: 230px;
+            max-width: 215px;
         }
     }
 
@@ -103,7 +104,7 @@
         width: 100%;
         object-fit: contain;
         position: absolute;
-        max-width: 780px;
+        max-width: 720px;
         right: 2em;
         bottom: 0;
     }

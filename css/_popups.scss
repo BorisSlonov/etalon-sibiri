@@ -136,6 +136,12 @@
         max-width: 160px;
 
     }
+
+    &__close-sign {
+        object-fit: contain;
+        width: 100%;
+        max-width: 50%;
+    }
 }
 
 @media(max-width:425px) {

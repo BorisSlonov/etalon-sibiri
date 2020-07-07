@@ -27,8 +27,7 @@
         justify-content: space-between;
         align-items: center;
         height: 100%;
-        padding: .25em 0;
-        
+        padding: 7.5px 0;
     }
 
     &__logo {
@@ -36,21 +35,19 @@
     }
 
     &__menu {
-        flex-basis: 90%;
+        flex-basis: 85%;
     }
 
     &__list {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        
         flex-basis: 100%;
-
        
     }
 
     &__link {
-        font-weight: 700;
+        font-size: 0.9rem;
         color: rgba(13, 22, 99, 0.65);
         text-decoration: none;
         transition: all .45s;
@@ -124,18 +121,7 @@
 
 @media(max-width:1170px) {
     .footer {
-        &__time {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-
-        &__callback {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
+     
 
         &__body {
             flex-direction: column;
@@ -144,6 +130,9 @@
         &__list {
             flex-wrap: wrap;
             justify-content: space-around;
+            li {
+                margin: 5px;
+            }
         }
 
         &__link {

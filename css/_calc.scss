@@ -27,7 +27,7 @@
         margin: 0 auto;
         width: 100%;
         max-width: 150px;
-        margin-bottom: 0.5em;
+        margin-bottom: 1em;
 
     }
 
@@ -40,10 +40,17 @@
 
     }
 
+    &__check-title {
+        span {
+            font-size: 0.8rem;
+        }
+    }
+
     &__h3 {
-        font-size: 1.2rem;
+        font-size: 1rem;
         white-space: nowrap;
     }
+
 
     &__checkbox {
         margin-right: 0;
@@ -61,6 +68,10 @@
 
     &__cost-container {
         font-size: 2rem;
+
+        .ruble {
+            font-size: 1.9rem;
+        }
     }
 
     .second-btn {
@@ -119,6 +130,8 @@
         transform: translateX(25%);
     }
 }
+
+
 
 .output-container1023 {
     display: flex;
