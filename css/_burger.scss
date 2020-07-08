@@ -27,8 +27,8 @@
         justify-content: space-between;
         align-items: center;
         height: 100%;
-        padding: 7.5px 0;
-        max-height: 65px;
+        padding: 10px 0;
+        max-height: 75px;
        
     }
 
@@ -48,18 +48,26 @@
     }
 
     &__link {
+        display: block;
         font-weight: 400;
         color: rgb(13, 22, 99);
         text-decoration: none;
-        transition: all .45s;
+        transition: all .25s;
         font-size: 0.9rem;
+        padding: 5px 10px;
+        border: 1px solid transparent;
+        border-radius: 20px;
+   
 
         &:hover {
             cursor: pointer;
-            color: $main-text;
+            transform: translateY(-2px);
+            
         }
 
     }
+
+
 
     &__burger {
         display: none;
@@ -76,6 +84,7 @@
         color: $main-text;
         border: 1px dashed rgba(0, 6, 89, 0.164);
         border-radius: 25px;
+        font-size: 0.9rem;
         .time {
             display: inline-block;
             margin-right: 5px;
@@ -84,6 +93,7 @@
     }
 
     &__callback {
+        font-size: 0.9rem;
        a {
            display: block;
            width: 100%;
@@ -208,7 +218,7 @@
 
 .bgc-fff {
     background-color: rgba(255, 255, 255, 0.98);
-    box-shadow: 0 2px 4px 1px rgba(204, 204, 204, 0.404);
+    box-shadow: 0 0 4px 1px rgba(204, 204, 204, 0.404);
 
 
 }

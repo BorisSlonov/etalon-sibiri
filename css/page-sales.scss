@@ -1,0 +1,31 @@
+.sales {
+
+    &__content {
+        background-color: #ccc;
+        padding: 2em 0;
+        text-align: center;
+    }
+
+    &__item:not(:first-child) {
+        margin-top: 1.5em;
+    }
+
+    &__link {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        color: rgb(13, 22, 99);
+        font-size: 1.2rem;
+        padding: 1em 0;
+    }
+
+    &__arrow {
+        width: 100%;
+        max-width: 25px;
+    }
+
+    &__descr {
+        display: none;
+    }
+}

@@ -15,7 +15,27 @@
     color: rgba(255, 255, 255, 0.9);
     padding: .5em 0;
     font-weight: 700;
-    transition: all .3s;
+    transition-property: box-shadow, color, transform, letter-spacing;
+    transition-duration: .3s;
+
+    .path-main-btn {
+        fill: rgba(255, 255, 255, 0.7);
+        transition-property: fill;
+        transition-duration: .3s;
+    }
+
+    &:hover {
+        color: #fff;
+        cursor: pointer;
+        box-shadow: 0 0 16px 4px #3ea5f952;
+        transform: scale(1.02);
+        letter-spacing: .35px;
+        .path-main-btn {
+            fill: rgba(255, 255, 255, 1);
+
+        }
+    }
+
 
     &__img {
         max-width: 30px;
@@ -35,31 +55,6 @@
         transform: translateX(1.125em);
         text-align: center;
     }
-
-    .path-main-btn {
-        fill: rgba(255, 255, 255, 0.7);
-        transition: all .3s;
-     
-
-    }
-
-    &:hover {
-        color: #fff;
-        cursor: pointer;
-        box-shadow: 0 0 16px 4px #3ea5f952;
-        transform: scale(1.02);
-        letter-spacing: .35px;
-    }
-
-    &:hover {
-        .path-main-btn {
-            fill: rgba(255, 255, 255, 1);
-
-        }
-    }
-
-
-
 }
 
 
@@ -78,7 +73,8 @@
     text-align: center;
     color: $main-text;
     font-weight: 700;
-    transition: all .3s;
+    transition-property: background-color, border-color, transform, color, box-shadow;
+    transition-duration: .3s;
 
     &:hover {
         background-color: #43ABE6;

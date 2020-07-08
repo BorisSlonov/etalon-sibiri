@@ -8,6 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700;800&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <script>!function (d, s) { var js, fjs = d.getElementsByTagName(s)[0]; js = d.createElement(s); js.async = 1; js.src = "//widget.flamp.ru/loader.js"; fjs.parentNode.insertBefore(js, fjs); }(document, "script");</script>
     <title>Title</title>
 </head>
 
@@ -35,7 +36,7 @@
                             <ul class='header__list'>
                                 <li class=''><a href='#popup' class='header__link'>Вода</a></li>
                                 <li class=''><a href='#works' class='header__link'>Кулеры и аксессуары</a></li>
-                                <li class=''><a href='#team' class='header__link'><span
+                                <li class=''><a href='#team' class='header__link header__link-red'><span
                                             class="cost-red">Акции</span></a></li>
                                 <li class=''><a href='#test' class='header__link'>Сертификаты</a></li>
                                 <li>
@@ -1256,7 +1257,20 @@
                 <div class="popup__content">
                     <!-- close -->
                     <a href="#" class="popup__close popup-close">
-                        <img class="popup__close-sign" src="img/icon/close.png" alt="">
+                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30"
+                            viewBox="0 0 172 172" style="fill:#000000;">
+                            <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
+                                stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
+                                font-family="none" font-weight="none" font-size="none" text-anchor="none"
+                                style="mix-blend-mode: normal">
+                                <path d="M0,172v-172h172v172z" fill="none"></path>
+                                <g fill="#cccccc">
+                                    <path
+                                        d="M40.13333,22.93333c-1.46702,0 -2.93565,0.55882 -4.05365,1.67969l-11.46667,11.46667c-2.24173,2.24173 -2.24173,5.87129 0,8.10729l41.81302,41.81302l-41.81302,41.81302c-2.24173,2.24173 -2.24173,5.87129 0,8.10729l11.46667,11.46667c2.24173,2.24173 5.87129,2.24173 8.10729,0l41.81302,-41.81302l41.81302,41.81302c2.236,2.24173 5.87129,2.24173 8.10729,0l11.46667,-11.46667c2.24173,-2.24173 2.24173,-5.87129 0,-8.10729l-41.81302,-41.81302l41.81302,-41.81302c2.24173,-2.236 2.24173,-5.87129 0,-8.10729l-11.46667,-11.46667c-2.24173,-2.24173 -5.87129,-2.24173 -8.10729,0l-41.81302,41.81302l-41.81302,-41.81302c-1.12087,-1.12087 -2.58663,-1.67969 -4.05365,-1.67969z">
+                                    </path>
+                                </g>
+                            </g>
+                        </svg>
                     </a>
                     <!-- close -->
                     <!-- title -->
@@ -1602,17 +1616,29 @@
     <!-- wrapper -->
 
 
-    <span style="display: none;" id="ruble">₽</span>
+
+
+
+ 
+
+
+
+
+
+
+
+
 
     <!-- scripts -->
-    <script>!function (d, s) { var js, fjs = d.getElementsByTagName(s)[0]; js = d.createElement(s); js.async = 1; js.src = "//widget.flamp.ru/loader.js"; fjs.parentNode.insertBefore(js, fjs); }(document, "script");</script>
-
+    <!-- libs -->
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"
         integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/rangeslider.js/2.3.0/rangeslider.min.js"></script>
     <script src="js/slick.min.js"></script>
     <!-- main js -->
+    <script src="js/with-jQuery.js"></script>
     <script src='js/calc.js'></script>
+    <script src='js/burger-popup.js'></script>
     <script src='js/main.js'></script>
     <!-- scripts -->
 </body>

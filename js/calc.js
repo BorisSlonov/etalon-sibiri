@@ -1,3 +1,19 @@
+function outputUpdate(vol) {
+    var output = document.querySelector('#volume');
+    output.value = vol;
+
+}
+
+//меняем цвет фона в зависимости от :checked
+function ChangeColor(color) {
+    var clrDiv = document.getElementsByClassName("output-container")[0];
+    clrDiv.style.backgroundColor = color;
+}
+document.getElementById("water-red").onclick = function () { ChangeColor("#e20c0e"); }
+document.getElementById("water-green").onclick = function () { ChangeColor("#47bd4d"); }
+document.getElementById("water-yellow").onclick = function () { ChangeColor("#f0b30d"); }
+
+
 $(document).ready(function () {
     jQuery('#fader').change(function () {
         var units = jQuery('#volume').val();
@@ -5,7 +21,7 @@ $(document).ready(function () {
         var costChange = jQuery(".cost-change").text(`200`);
         var ruble = $("#ruble").text();
         var costWithRuble = costChange + ruble;
-       
+
         if (units >= 2) {
             var cost = 175;
             costChange.text(`175`);
@@ -103,7 +119,7 @@ $(document).ready(function () {
         }
 
         var score = parseFloat(cost * units);
-      
+
         jQuery('.label-red').text(score);
         jQuery('.output-container1023__output.red').show();
     });
@@ -175,7 +191,7 @@ $(document).ready(function () {
         }
 
         var score = parseFloat(cost * units);
-     
+
         jQuery('.output-container1023__output .label-green').text(score);
         jQuery('.output-container1023__output.label-green').show();
     });
@@ -247,7 +263,7 @@ $(document).ready(function () {
         }
 
         var score = parseFloat(cost * units);
-     
+
         jQuery('.output-container1023__output .label-yellow').text(score);
         jQuery('.output-container1023__output.label-yellow').show();
     });

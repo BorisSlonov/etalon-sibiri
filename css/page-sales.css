@@ -1,0 +1,35 @@
+.sales__content {
+  background-color: #ccc;
+  padding: 2em 0;
+  text-align: center;
+}
+
+.sales__item:not(:first-child) {
+  margin-top: 1.5em;
+}
+
+.sales__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #0d1663;
+  font-size: 1.2rem;
+  padding: 1em 0;
+}
+
+.sales__arrow {
+  width: 100%;
+  max-width: 25px;
+}
+
+.sales__descr {
+  display: none;
+}
+/*# sourceMappingURL=page-sales.css.map */
